@@ -14,7 +14,7 @@ body {
     justify-content: space-around;
 }
 .flex-container > div {
-    width: 380px;
+    width: 370px;
     margin: 35px;
 }
 .card {
