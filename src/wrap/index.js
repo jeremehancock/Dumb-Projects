@@ -26,9 +26,15 @@ const Index = ({ children }) => {
         <title>Dumb Projects</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Dumb Projects" />
-        <meta property="og:title" content="Ridiculous projects from the mind of Jereme Hancock." />
+        <meta
+          property="og:title"
+          content="Ridiculous projects from the mind of Jereme Hancock."
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="Ridiculous projects from the mind of Jereme Hancock." />
+        <meta
+          property="og:description"
+          content="Ridiculous projects from the mind of Jereme Hancock."
+        />
         <meta property="og:url" content="https://dumbprojects.com" />
         <meta property="og:image" content={logo} />
         <meta property="og:site_name" content="dumbprojects.com" />
@@ -41,7 +47,12 @@ const Index = ({ children }) => {
         <link rel="apple-touch-icon" sizes="144x144" href={appleicon144x144} />
         <link rel="apple-touch-icon" sizes="152x152" href={appleicon152x152} />
         <link rel="apple-touch-icon" sizes="180x180" href={appleicon180x180} />
-        <link rel="icon" type="image/png" sizes="192x192"  href={androidicon192x192} />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href={androidicon192x192}
+        />
         <link rel="icon" type="image/png" sizes="32x32" href={favicon32x32} />
         <link rel="icon" type="image/png" sizes="96x96" href={favicon96x96} />
         <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16} />
