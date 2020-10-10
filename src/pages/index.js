@@ -34,7 +34,7 @@ const Index = () => (
 
       <Card title="Roadside America API" image={roadsideamerica} link="https://roadside-america.dumbprojects.com" alt="Roadside America API" />
 
-      <Card title="So much Trump!" image={randomtrump} link="https://randomtrump.com" alt="Random Trump"/>
+      <Card title="So much Trump!" image={randomtrump} link="https://randomtrump.com" alt="Random Trump" />
     </Page>
   </Wrap>
 );
