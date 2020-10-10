@@ -31,13 +31,7 @@ export default function HTML(props) {
 `,
           }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-           src='https://www.statcounter.com/counter/counter.js'
-`,
-          }}
-          async />
+        <script src='https://www.statcounter.com/counter/counter.js' async />
       </body>
     </html>
   );
