@@ -1,8 +1,8 @@
 import React from "react";
 
-const Card = ({ image, title, link, alt }) => (
+const Card = ({ image, title, link }) => (
   <div className="card">
-    <a href={link} target="_blank" rel="noreferrer"><img src={image} alt={alt} /></a>
+    <a href={link} target="_blank" rel="noreferrer">{image}</a>
     <p>{title}</p>
   </div>
 );

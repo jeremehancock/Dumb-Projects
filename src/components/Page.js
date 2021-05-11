@@ -1,10 +1,8 @@
 import React from "react";
 
-import logo from "@/images/dumb.png";
-
-const Page = ({ children, title, alt, link, linkTitle }) => (
+const Page = ({ children, logo, title, link, linkTitle }) => (
   <div>
-    <div className="logo"><img src={logo} alt={alt} /></div>
+    <div className="logo">{logo}</div>
     <div className="tagline">{title}
       <a href={link} target="_blank" rel="noreferrer">{linkTitle}</a>.
     </div>
