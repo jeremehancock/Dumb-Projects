@@ -14,14 +14,17 @@ const PiLab = ({ data }) => (
       alt="Pi Lab"
       social={false}
     >
-      {data.allCustomApi.nodes[0].data.map((item, index) => (
-        index <= 8 && <Card
-          key={item.toString()}
-          title={item.title}
-          image={item.coverImage}
-          link={item.permalink}
-        />
-      ))}
+      {data.allCustomApi.nodes[0].data.map(
+        (item, index) =>
+          index <= 8 && (
+            <Card
+              key={item.toString()}
+              title={item.title}
+              image={item.coverImage}
+              link={item.permalink}
+            />
+          )
+      )}
     </Page>
   </Wrap>
 );

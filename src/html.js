@@ -21,16 +21,23 @@ export default function Html(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        {process.env.NODE_ENV === "production" && <><script
-          dangerouslySetInnerHTML={{
-            __html: `
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
             var sc_project = 12073038;
             var sc_invisible=1;
             var sc_security='${process.env.GATSBY_STATCOUNTER_KEY}';
 `,
-          }}
-        />
-        <script src="https://www.statcounter.com/counter/counter.js" async /></>}
+              }}
+            />
+            <script
+              src="https://www.statcounter.com/counter/counter.js"
+              async
+            />
+          </>
+        )}
       </body>
     </html>
   );

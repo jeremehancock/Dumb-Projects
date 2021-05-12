@@ -1,9 +1,9 @@
 let fs = require("fs");
 const publicPath = `./public`;
 const robotsSource = `${process.env.PWD}/plugins/robots-txt/env/${process.env.GATSBY_ROBOTS_ENVIRONMENT}.txt`;
-const creatingText = "Creating robots.txt..."
-const errorText = "Error when creating robots.txt file."
-const successText = "Successfully created robots.txt file!"
+const creatingText = "Creating robots.txt...";
+const errorText = "Error when creating robots.txt file.";
+const successText = "Successfully created robots.txt file!";
 
 // For Development
 exports.onCreateDevServer = async ({ reporter }) => {
@@ -28,7 +28,7 @@ async function createRobotsTxt({ reporter }) {
 
 // Abstraction to create robots.txt file
 function createFile({ reporter }) {
-  fs.copyFile(robotsSource, `${publicPath}/robots.txt`, (err) => {
+  fs.copyFile(robotsSource, `${publicPath}/robots.txt`, err => {
     if (err) throw reporter.panic(`${errorText} - ${err.message}`);
     reporter.success(successText);
   });

@@ -17,7 +17,7 @@ import favicon96x96 from "@/images/favicon/favicon-96x96.png";
 import favicon16x16 from "@/images/favicon/favicon-16x16.png";
 import msicon144x144 from "@/images/favicon/ms-icon-144x144.png";
 
-import "@/styles/global.css"
+import "@/styles/global.css";
 
 const Wrap = ({ children }) => {
   return (
