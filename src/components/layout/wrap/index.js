@@ -59,10 +59,6 @@ const Wrap = ({ children }) => {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content={msicon144x144} />
         <meta name="theme-color" content="#ffffff" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
-          rel="stylesheet"
-        />
         <meta name="twitter:image" content={logo} />
       </Helmet>
       {children}
