@@ -1,0 +1,8 @@
+# robots.txt for https://dumbprojects.com/
+#
+# Greetings human user.
+#
+# This is robot territory.
+
+User-agent: *
+Disallow: /

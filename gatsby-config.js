@@ -13,6 +13,7 @@ require("dotenv").config({
 module.exports = {
   /* Your site config here */
   plugins: [
+    { resolve: `robots-txt` },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
