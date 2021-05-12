@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export default function HTML(props) {
+export default function Html(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
@@ -21,22 +21,22 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script
+        {process.env.NODE_ENV === "production" && <><script
           dangerouslySetInnerHTML={{
             __html: `
             var sc_project = 12073038;
             var sc_invisible=1;
-            var sc_security='bef23934';
+            var sc_security='${process.env.GATSBY_STATCOUNTER_KEY}';
 `,
           }}
         />
-        <script src='https://www.statcounter.com/counter/counter.js' async />
+        <script src="https://www.statcounter.com/counter/counter.js" async /></>}
       </body>
     </html>
   );
 }
 
-HTML.propTypes = {
+Html.propTypes = {
   htmlAttributes: PropTypes.object,
   headComponents: PropTypes.array,
   bodyAttributes: PropTypes.object,

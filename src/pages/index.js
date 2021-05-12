@@ -1,9 +1,9 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Wrap from "@/wrap";
-import Page from "@/components/Page";
-import Card from "@/components/Card";
+import Wrap from "@/components/layout/wrap";
+import Page from "@/components/layout/page";
+import Card from "@/components/basic/card";
 
 const Index = () => (
   <Wrap>

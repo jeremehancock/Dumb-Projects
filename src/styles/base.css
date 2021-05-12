@@ -1,0 +1,88 @@
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Raleway', sans-serif;
+        padding: 28px;
+        color: #303030;
+        background: #ffffff;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .flex-container > div {
+        width: 470px;
+        margin: 35px;
+    }
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+        transition: transform .2s;
+    }
+    .card:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    a {
+        color: #6D4A03;
+        text-decoration: none;
+    }
+    p {
+        margin: 10px;
+    }
+    .social {
+        position:absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .logo {
+        position: relative;
+        top: -30px;
+        left: 10px;
+        width: 200px;
+    }
+    .tagline {
+        font-size: 2em;
+        padding-bottom: 20px;
+        padding-left: 10px;
+    }
+    .tagline a {
+        text-decoration: underline;
+    }
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+        .logo {
+            top: -10px;
+            left: 0;
+            width: 130px;
+        }
+        .flex-container > div {
+            margin: 10px;
+        }
+        .card {
+            transition: none;
+        }
+        .card:hover {
+            transform: none;
+        }
+        .tagline {
+            font-size: .9em;
+            font-style: italic;
+            text-align: center;
+            padding-left:0;
+        }
+    }
+}
