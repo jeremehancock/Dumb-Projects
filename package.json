@@ -2,7 +2,7 @@
   "name": "Dumb-Projects",
   "private": false,
   "description": "https://dumbprojects.com",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -22,7 +22,6 @@
     "gatsby-plugin-postcss": "^4.5.0",
     "gatsby-plugin-react-helmet": "^4.4.0",
     "gatsby-plugin-sharp": "^3.4.2",
-    "gatsby-source-custom-api": "^2.1.4",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-sharp": "^3.4.0",
     "postcss": "^8.2.15",

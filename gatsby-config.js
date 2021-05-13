@@ -12,9 +12,8 @@ require("dotenv").config({
 });
 
 module.exports = {
-  /* Your site config here */
   plugins: [
-    { resolve: `robots-txt` },
+    `robots-txt`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -37,9 +36,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-custom-api",
+      resolve: `gatsby-source-bludit`,
       options: {
-        url: `https://pilab.dev/api/pages?token=${process.env.GATSBY_PILAB_KEY}`,
+        url: "https://pilab.dev/api/pages",
+        token: process.env.GATSBY_PILAB_TOKEN,
       },
     },
   ],
