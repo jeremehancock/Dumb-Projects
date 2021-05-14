@@ -12,6 +12,7 @@ require("dotenv").config({
 });
 
 module.exports = {
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     `robots-txt`,
     `gatsby-plugin-image`,
