@@ -40,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-bludit`,
       options: {
         url: "https://pilab.dev/api/pages",
-        token: process.env.GATSBY_PILAB_TOKEN,
+        token: process.env.GATSBY_BLUDIT_TOKEN,
       },
     },
   ],
