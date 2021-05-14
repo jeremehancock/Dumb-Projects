@@ -9,7 +9,7 @@ const Index = () => (
   <Wrap>
     <Page
       title="Ridiculous projects from the mind of "
-      link="https://jeremehancock.com"
+      url="https://jeremehancock.com"
       linkTitle="Jereme Hancock"
       alt="Jereme Hancock"
       logo={
@@ -29,7 +29,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Pi Lab"
         />
-        link="https://pilab.dev"
+        url="https://pilab.dev"
       />
 
       <Card
@@ -40,7 +40,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Zombie Pence"
         />
-        link="https://zombiepence.com"
+        url="https://zombiepence.com"
       />
 
       <Card
@@ -51,7 +51,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Out of Context TV"
         />
-        link="https://outofcontext.dumbprojects.com"
+        url="https://outofcontext.dumbprojects.com"
       />
 
       <Card
@@ -62,7 +62,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Random Goat"
         />
-        link="https://randomgoat.com"
+        url="https://randomgoat.com"
       />
 
       <Card
@@ -73,7 +73,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Bouncing Trump"
         />
-        link="https://bouncingtrump.com"
+        url="https://bouncingtrump.com"
       />
 
       <Card
@@ -84,7 +84,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Snopes It"
         />
-        link="https://snopesit.com"
+        url="https://snopesit.com"
       />
 
       <Card
@@ -95,7 +95,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Daily Swayze"
         />
-        link="https://dailyswayze.com"
+        url="https://dailyswayze.com"
       />
 
       <Card
@@ -106,7 +106,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Roadside America API"
         />
-        link="https://roadside-america.dumbprojects.com"
+        url="https://roadside-america.dumbprojects.com"
       />
 
       <Card
@@ -117,7 +117,7 @@ const Index = () => (
           placeholder="blurred"
           alt="Random Trump"
         />
-        link="https://randomtrump.com"
+        url="https://randomtrump.com"
       />
     </Page>
   </Wrap>

@@ -1,15 +1,15 @@
 import React from "react";
 import Href from "../../basic/href";
 
-const Page = ({ children, logo, title, link, linkTitle, social = true }) => (
+const Page = ({ children, logo, title, url, link, linkTitle, newTab, social = true }) => (
   <div>
     {logo && <div className="logo">{logo}</div>}
     {title && (
       <div className="tagline">
         {title}
-        <a href={link} target="_blank" rel="noreferrer">
+        <Href url={url} link={link} newTab={newTab}>
           {linkTitle}
-        </a>
+        </Href>
         .
       </div>
     )}

@@ -9,7 +9,7 @@ const Bludit = ({ data }) => (
   <Wrap>
     <Page
       title="Latest Posts from "
-      link="https://pilab.dev"
+      url="https://pilab.dev"
       linkTitle="Pi Lab"
       alt="Pi Lab"
       social={false}
@@ -20,7 +20,7 @@ const Bludit = ({ data }) => (
             key={node.id.toString()}
             title={node.title}
             image={node.coverImage}
-            link={node.permalink}
+            link={`/bludit/${node.slug}`}
           />
         );
       })}
@@ -37,6 +37,7 @@ export const query = graphql`
           coverImage
           title
           permalink
+          slug
         }
       }
     }
