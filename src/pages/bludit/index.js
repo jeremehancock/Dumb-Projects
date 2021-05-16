@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Wrap from "@/components/layout/wrap";
-import Page from "@/components/layout/page";
-import Card from "@/components/basic/card";
+import Wrap from "../../components/layout/bludit/wrap";
+import Page from "../../components/layout/bludit/page";
+import Card from "../../components/basic/bludit/card";
 
 const Bludit = ({ data }) => (
   <Wrap>
@@ -12,16 +12,17 @@ const Bludit = ({ data }) => (
       url="https://pilab.dev"
       linkTitle="Pi Lab"
       alt="Pi Lab"
-      social={false}
     >
       {data.allBludit.edges.map(({ node }) => {
         return (
-          <Card
-            key={node.id.toString()}
-            title={node.title}
-            image={node.coverImage}
-            link={`/bludit/${node.slug}`}
-          />
+            <Card
+                key={node.title}
+                title={node.title}
+                image={node.coverImage}
+                content={`${node.content.replace(/<\/?[^>]+(>|$)/g, "").substring(0,100)}...`}
+                url={node.permalink}
+                tags={node.tags}
+            />
         );
       })}
     </Page>
@@ -30,13 +31,15 @@ const Bludit = ({ data }) => (
 
 export const query = graphql`
   {
-    allBludit(limit: 9) {
+    allBludit(limit: 8) {
       edges {
         node {
           id
-          coverImage
           title
+          coverImage
           permalink
+          content
+          tags
           slug
         }
       }

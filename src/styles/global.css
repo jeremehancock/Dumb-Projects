@@ -1,7 +1,7 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "../../node_modules/tailwindcss/base.css";
+@import "../../node_modules/tailwindcss/components.css";
+@import "../../node_modules/tailwindcss/utilities.css";
 
-@import "./base.css";
+@import "base.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');

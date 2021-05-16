@@ -1,5 +1,5 @@
 import React from "react";
-import Href from "../href";
+import Href from "../../href";
 
 const Card = ({ image, title, url, link, newTab }) => (
   <div className="card">

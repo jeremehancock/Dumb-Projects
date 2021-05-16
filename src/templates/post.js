@@ -1,14 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Wrap from "@/components/layout/wrap";
-import Page from "@/components/layout/page";
+import Wrap from "../components/layout/main/wrap";
 
 export default function Post({ data }) {
   const post = data.allBludit.edges[0].node;
   return (
     <Wrap>
-      <Page>
         <div>
           <h1>{post.title}</h1>
           <div
@@ -23,7 +21,6 @@ export default function Post({ data }) {
             }}
           />
         </div>
-      </Page>
     </Wrap>
   );
 }
