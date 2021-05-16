@@ -16,7 +16,7 @@ const Index = () => (
       alt="Jereme Hancock"
       logo={
         <StaticImage
-          src="src/images/dumb.png"
+          src="../images/dumb.png"
           width={200}
           placeholder="blurred"
           alt="Dumb Projects"
