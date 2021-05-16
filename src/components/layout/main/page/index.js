@@ -1,13 +1,27 @@
 import React from "react";
 import Href from "../../../basic/href";
 
-const Page = ({ children, logo, title, url, link, linkTitle, newTab, social = true }) => (
+const Page = ({
+  children,
+  logo,
+  title,
+  url,
+  link,
+  linkTitle,
+  newTab,
+  social = true,
+}) => (
   <div>
     {logo && <div className="ml-10 mb-10">{logo}</div>}
     {title && (
       <div className="text-gray-700 text-3xl mb-14 mt-10 md:mt-0 text-left mx-10">
         {title}
-        <Href url={url} link={link} newTab={newTab} className="text-antique-bronze md:hover:underline">
+        <Href
+          url={url}
+          link={link}
+          newTab={newTab}
+          className="text-antique-bronze md:hover:underline"
+        >
           {linkTitle}
         </Href>
         .

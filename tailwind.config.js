@@ -15,7 +15,7 @@ module.exports = {
     extend: {
       colors: {
         "antique-bronze": "#704A07",
-      }
+      },
     },
     colors: {
       transparent: "transparent",

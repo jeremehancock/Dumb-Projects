@@ -1,11 +1,6 @@
 import React from "react";
 import Href from "../../href";
-
-const Tag = ({ tag, url, newTab }) => (
-    <Href url={url} newTab={newTab} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 md:hover:bg-gray-700 md:hover:text-white mb-3 md:mb-0">
-      {tag}
-    </Href>
-);
+import Tag from "../tag";
 
 const Card = ({ title, image, content, url, link, tags, newTab }) => (
   <Href url={url} link={link} newTab={newTab}>
@@ -18,8 +13,12 @@ const Card = ({ title, image, content, url, link, tags, newTab }) => (
         )}
       </Href>
       <div className="px-6 py-4">
-        <div className="font-bold text-gray-700 text-xl mb-2 hover:underline">{title}</div>
-        {content && <p className="text-gray-700 text-base ml-0 mb-0">{content}</p>}
+        <div className="font-bold text-gray-700 text-xl mb-2 hover:underline">
+          {title}
+        </div>
+        {content && (
+          <p className="text-gray-700 text-base ml-0 mb-0">{content}</p>
+        )}
       </div>
       {tags && (
         <div className="px-6 py-4">

@@ -15,14 +15,16 @@ const Bludit = ({ data }) => (
     >
       {data.allBludit.edges.map(({ node }) => {
         return (
-            <Card
-                key={node.title}
-                title={node.title}
-                image={node.coverImage}
-                content={`${node.content.replace(/<\/?[^>]+(>|$)/g, "").substring(0,100)}...`}
-                url={node.permalink}
-                tags={node.tags}
-            />
+          <Card
+            key={node.title}
+            title={node.title}
+            image={node.coverImage}
+            content={`${node.content
+              .replace(/<\/?[^>]+(>|$)/g, "")
+              .substring(0, 100)}...`}
+            url={node.permalink}
+            tags={node.tags}
+          />
         );
       })}
     </Page>

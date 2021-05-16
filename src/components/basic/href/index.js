@@ -3,7 +3,11 @@ import { Link } from "gatsby";
 
 const Href = ({ children, url, link, alt, newTab = true, className }) => {
   if (link) {
-    return <Link to={link} className={className}>{children}</Link>;
+    return (
+      <Link to={link} className={className}>
+        {children}
+      </Link>
+    );
   } else {
     return newTab ? (
       <a
