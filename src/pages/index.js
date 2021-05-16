@@ -66,7 +66,7 @@ const Index = () => (
       />
 
       <Card
-        title="Just a bunch of bouncing Trump heads."
+        title="Bouncing Trump heads!"
         image={<StaticImage
           src="../images/projects/bouncing-trump.png"
           width={440}

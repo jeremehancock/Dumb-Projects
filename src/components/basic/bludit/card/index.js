@@ -2,14 +2,14 @@ import React from "react";
 import Href from "../../href";
 
 const Tag = ({ tag, url, newTab }) => (
-    <Href url={url} newTab={newTab} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-gray-700 hover:text-white">
+    <Href url={url} newTab={newTab} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 md:hover:bg-gray-700 md:hover:text-white mb-3 md:mb-0">
       {tag}
     </Href>
 );
 
 const Card = ({ title, image, content, url, link, tags, newTab }) => (
   <Href url={url} link={link} newTab={newTab}>
-    <div className="max-w-sm mx-5 md:mx-2 rounded overflow-hidden shadow-lg mb-10 md:mb-16 md:transition md:transform md:hover:scale-105">
+    <div className="max-w-sm mx-5 md:mx-2 rounded overflow-hidden shadow-lg mb-10 md:mb-16 md:transition md:transform md:duration-200 md:hover:scale-105">
       <Href url={url} newTab={newTab}>
         {typeof image !== "object" ? (
           <img src={image} alt={title} className="w-full" />
