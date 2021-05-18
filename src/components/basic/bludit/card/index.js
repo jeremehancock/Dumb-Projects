@@ -13,7 +13,7 @@ const Card = ({ title, image, content, url, link, tags, newTab }) => (
         )}
       </Href>
       <div className="px-6 py-4">
-        <div className="font-bold text-gray-700 text-xl mb-2 hover:underline">
+        <div className="font-bold text-gray-700 text-xl mb-2 md:hover:underline">
           {title}
         </div>
         {content && (

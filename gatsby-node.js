@@ -1,7 +1,7 @@
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      allBludit {
+      allBluditPages {
         edges {
           node {
             slug
@@ -10,7 +10,7 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     }
   `);
-  data.allBludit.edges.forEach(edge => {
+  data.allBluditPages.edges.forEach(edge => {
     const slug = edge.node.slug;
     actions.createPage({
       path: `/bludit/${slug}`,

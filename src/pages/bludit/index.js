@@ -13,7 +13,7 @@ const Bludit = ({ data }) => (
       linkTitle="Pi Lab"
       alt="Pi Lab"
     >
-      {data.allBludit.edges.map(({ node }) => {
+      {data.allBluditPages.edges.map(({ node }) => {
         return (
           <Card
             key={node.title}
@@ -33,7 +33,7 @@ const Bludit = ({ data }) => (
 
 export const query = graphql`
   {
-    allBludit(limit: 8) {
+    allBluditPages(limit: 8) {
       edges {
         node {
           id

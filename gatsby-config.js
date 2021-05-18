@@ -30,17 +30,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    {
       resolve: `gatsby-source-bludit`,
       options: {
         url: "https://pilab.dev/api/pages",
         token: process.env.GATSBY_BLUDIT_TOKEN,
+        numberOfItems: "10", // Only available on the /api/pages endpoint
+        rootKey: "BluditPages"
       },
     },
   ],

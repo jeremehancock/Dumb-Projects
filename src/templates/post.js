@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Wrap from "../components/layout/main/wrap";
 
 export default function Post({ data }) {
-  const post = data.allBludit.edges[0].node;
+  const post = data.allBluditPages.edges[0].node;
   return (
     <Wrap>
       <div>
@@ -24,7 +24,7 @@ export default function Post({ data }) {
 
 export const query = graphql`
   query ($slug: String!) {
-    allBludit(filter: { slug: { eq: $slug } }) {
+    allBluditPages(filter: { slug: { eq: $slug } }) {
       edges {
         node {
           title
