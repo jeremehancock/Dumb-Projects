@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `projectImages`,
-        path: `./src/images/projects`,
+        path: `${__dirname}/src/images/projects`,
       },
     },
     `gatsby-transformer-json`,
@@ -40,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `./src/data`,
+        path: `${__dirname}/src/data`,
       },
     },
     {
