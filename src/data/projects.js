@@ -108,7 +108,7 @@ const Projects = [
         alt="Random Trump"
       />
     ),
-    url: "https://randomtrump.co",
+    url: "https://randomtrump.com",
   },
 ];
 

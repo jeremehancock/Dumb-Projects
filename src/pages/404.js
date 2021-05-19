@@ -1,3 +1,9 @@
-import Index from "./index";
+import { useEffect } from 'react';
+import { navigate } from "@reach/router"
 
-export default Index;
+export default () => {
+  useEffect(() => {
+    navigate('/');
+  }, []);
+  return null;
+};

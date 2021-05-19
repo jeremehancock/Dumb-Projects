@@ -26,7 +26,21 @@ module.exports = {
         alias: {
           "@": "src",
         },
-        extensions: ["js", "scss"],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projectImages`,
+        path: `./src/images/projects`,
+      },
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `./src/data`,
       },
     },
     {
@@ -35,7 +49,7 @@ module.exports = {
         url: "https://pilab.dev/api/pages",
         token: process.env.GATSBY_BLUDIT_TOKEN,
         numberOfItems: "10", // Only available on the /api/pages endpoint
-        rootKey: "BluditPages"
+        rootKey: "BluditPages",
       },
     },
   ],

@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Raspberry Pi Web Cluster",
+    "image": "pilab",
+    "url": "https://pilab.dev"
+  },
+  {
+    "title": "No one will forget that FLY!",
+    "image": "zombiepence",
+    "url": "https://zombiepence.com"
+  },
+  {
+    "title": "Out of Context TV",
+    "image": "outofcontext",
+    "url": "https://outofcontext.dumbprojects.com"
+  },
+  {
+    "title": "Looking for random goat gifs?",
+    "image": "random-goat",
+    "url": "https://randomgoat.com"
+  },
+  {
+    "title": "Bouncing Trump heads!",
+    "image": "bouncing-trump",
+    "url": "https://bouncingtrump.com"
+  },
+  {
+    "title": "Fact checking is easy!",
+    "image": "snopes-it",
+    "url": "https://snopesit.com"
+  },
+  {
+    "title": "Are you crazy for Swayze?",
+    "image": "daily-swayze",
+    "url": "https://dailyswayze.com"
+  },
+  {
+    "title": "Roadside America API",
+    "image": "roadside-america",
+    "url": "https://roadside-america.dumbprojects.com"
+  },
+  {
+    "title": "So much Trump!",
+    "image": "random-trump",
+    "url": "https://randomtrump.com"
+  }
+]

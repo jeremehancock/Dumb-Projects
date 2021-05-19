@@ -1,13 +1,12 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
 import Wrap from "../components/layout/main/wrap";
 import Page from "../components/layout/main/page";
 import Card from "../components/basic/main/card";
 
-import Projects from "../data/projects";
-
-const Index = () => (
+const Index = ({ data }) => (
   <Wrap>
     <Page
       title="Ridiculous projects from the mind of "
@@ -23,17 +22,33 @@ const Index = () => (
         />
       }
     >
-      {Projects &&
-        Projects.map((item, index) => (
+      {data.allProjectsJson.edges.map(({ node }) => {
+        return (
           <Card
-            key={`project_${index}`}
-            title={item.title}
-            image={item.image}
-            url={item.url}
+            key={node.id}
+            title={node.title}
+            image={node.image}
+            url={node.url}
           />
-        ))}
+        );
+      })}
     </Page>
   </Wrap>
 );
+
+export const query = graphql`
+  {
+    allProjectsJson {
+      edges {
+        node {
+          url
+          title
+          image
+          id
+        }
+      }
+    }
+  }
+`;
 
 export default Index;
