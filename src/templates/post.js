@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Wrap from "../components/layout/main/wrap";
+import Wrap from "@/components/layout/main/wrap";
 
 export default function Post({ data }) {
   const post = data.allBluditPages.edges[0].node;

@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import Wrap from "../../components/layout/bludit/wrap";
-import Page from "../../components/layout/bludit/page";
-import Card from "../../components/basic/bludit/card";
+import Wrap from "@/components/layout/bludit/wrap";
+import Page from "@/components/layout/bludit/page";
+import Card from "@/components/basic/bludit/card";
 
 const Bludit = ({ data }) => (
   <Wrap>

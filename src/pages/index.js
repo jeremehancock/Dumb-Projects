@@ -2,9 +2,9 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 
-import Wrap from "../components/layout/main/wrap";
-import Page from "../components/layout/main/page";
-import Card from "../components/basic/main/card";
+import Wrap from "@/components/layout/main/wrap";
+import Page from "@/components/layout/main/page";
+import Card from "@/components/basic/main/card";
 
 const Index = ({ data }) => (
   <Wrap>
