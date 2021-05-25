@@ -10,16 +10,6 @@ exports.createPages = async function ({ actions, graphql, reporter }) {
           }
         }
       }
-      allMdx {
-        edges {
-          node {
-            id
-            frontmatter {
-              slug
-            }
-          }
-        }
-      }
     }
   `);
 
@@ -32,16 +22,6 @@ exports.createPages = async function ({ actions, graphql, reporter }) {
       path: `/bludit/${slug}`,
       component: require.resolve(`./src/templates/post.js`),
       context: { slug: slug },
-    });
-  });
-
-  const posts = data.allMdx.edges;
-
-  posts.forEach(({ node }, index) => {
-    createPage({
-      path: node.frontmatter.slug,
-      component: require.resolve(`./src/templates/postTemplate.js`),
-      context: { id: node.id },
     });
   });
 };
