@@ -10,8 +10,8 @@
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="DumbProjects - AI Web App Portfolio">
     <meta property="og:description" content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
-    <meta property="og:image" content="https://dumbprojects.com/images/og-image.svg">
-    <meta property="og:url" content="https://dumbprojects.com">
+    <meta property="og:image" content="https://yourdomain.com/og-image.svg">
+    <meta property="og:url" content="https://yourdomain.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DumbProjects">
     
@@ -19,7 +19,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DumbProjects - AI Web App Portfolio">
     <meta name="twitter:description" content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
-    <meta name="twitter:image" content="https://dumbprojects.com//images/og-image.svg">
+    <meta name="twitter:image" content="https://yourdomain.com/og-image.svg">
     <style>
         * {
             margin: 0;
@@ -276,6 +276,7 @@
         .project-links {
             display: flex;
             gap: 1rem;
+            align-self: flex-end;
         }
 
         .project-link {
@@ -283,6 +284,9 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 4px;
         }
 
         .project-link:hover {
@@ -445,13 +449,18 @@
                         <h3 class="project-title">AI Game Collection</h3>
                         <p class="project-description">A collection of 15+ browser-based games created entirely with AI assistance! From classic Snake and Minesweeper to unique puzzles like Wave Guide and Circle Tap, all with a modern dark theme and responsive design.</p>
                         <div class="project-tags">
-                            <span class="tag">HTML5</span>
+                            <span class="tag">HTML</span>
                             <span class="tag">Vanilla JS</span>
                             <span class="tag">PWA</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://aigamecollection.com" class="project-link">Play Games</a>
-                            <a href="https://github.com/jeremehancock/AI-Game-Collection" class="project-link">Code</a>
+                            <a href="https://aigamecollection.com" class="project-link" target="_blank" rel="noopener noreferrer">Play Games</a>
+                            <a href="https://github.com/jeremehancock/AI-Game-Collection" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -467,7 +476,12 @@
                             <span class="tag">Plex API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Posteria" class="project-link">Code</a>
+                            <a href="https://github.com/jeremehancock/Posteria" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -478,12 +492,17 @@
                         <h3 class="project-title">Glimpse</h3>
                         <p class="project-description">A gorgeous web interface for browsing your Plex, Jellyfin, or Emby media libraries! Features movie trailers, cast info, genre filters, and a "roll the dice" random picker. Multi-server support with automatic theming. Your media collection has never looked this good!</p>
                         <div class="project-tags">
+                            <span class="tag">HTML</span>
                             <span class="tag">Python</span>
                             <span class="tag">Docker</span>
-                            <span class="tag">Multi-Server</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Glimpse" class="project-link">Code</a>
+                            <a href="https://github.com/jeremehancock/Glimpse" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -499,7 +518,12 @@
                             <span class="tag">Plex API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/CLIX" class="project-link">Code</a>
+                            <a href="https://github.com/jeremehancock/CLIX" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -515,7 +539,12 @@
                             <span class="tag">Data Analysis</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Libretto" class="project-link">Code</a>
+                            <a href="https://github.com/jeremehancock/Libretto" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -531,7 +560,12 @@
                             <span class="tag">Multi-Server</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Ludanta" class="project-link">Code</a>
+                            <a href="https://github.com/jeremehancock/Ludanta" class="project-link">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                                GitHub
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -553,7 +587,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 DumbProjects. Made with ❤️, ☕, and 🤖 by <a href="https://jeremehancock.com" target="_blank" style="color: var(--accent-purple); text-decoration: none;">Jereme Hancock</a>.</p>
+        <p>&copy; 2025 DumbProjects. Made with ❤️, ☕, and 🤖 by <a href="https://jeremehancock.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-purple); text-decoration: none;">Jereme Hancock</a>.</p>
     </footer>
 
     <script>
