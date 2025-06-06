@@ -51,16 +51,6 @@ These projects range from genuinely useful to "why did you make this?" but they'
 
 Most started as quick experiments that got way out of hand. Turns out when you give AI some creative freedom, magic happens!
 
-## 🎨 Design & Tech
-
-- **Modern Dark Theme** - Easy on the eyes
-- **Responsive Design** - Works everywhere
-- **Smooth Animations** - Because why not?
-- **Clean Typography** - Readability first
-- **Progressive Enhancement** - Graceful degradation
-
-Built with vanilla HTML, CSS, and JavaScript for maximum compatibility and minimal overhead.
-
 ---
 
 _Made with ❤️, ☕, and 🤖 by [Jereme Hancock](https://jeremehancock.com)_
