@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DumbProjects - AI Web App Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI2IiBmaWxsPSIjMWUxYjJlIi8+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E4NTVmNztzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjBhNWZhO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHoiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHptMiAzdjEwaDZjMi43NjEgMCA1LTIuMjM5IDUtNXMtMi4yMzktNS01LTVoLTZ6IiBmaWxsPSIjMWUxYjJlIi8+Cjwvc3ZnPgo=">
-    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI2IiBmaWxsPSIjMWUxYjJlIi8+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E4NTVmNztzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjBhNWZhO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHoiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHptMiAzdjEwaDZjMi43NjEgMCA1LTIuMjM5IDUtNXMtMi4yMzktNS01LTVoLTZ6IiBmaWxsPSIjMWUxYjJlIi8+Cjwvc3ZnPgo=">
-    
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI2IiBmaWxsPSIjMWUxYjJlIi8+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E4NTVmNztzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjBhNWZhO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHoiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHptMiAzdjEwaDZjMi43NjEgMCA1LTIuMjM5IDUtNXMtMi4yMzktNS01LTVoLTZ6IiBmaWxsPSIjMWUxYjJlIi8+Cjwvc3ZnPgo=">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI2IiBmaWxsPSIjMWUxYjJlIi8+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E4NTVmNztzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjBhNWZhO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHoiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHptMiAzdjEwaDZjMi43NjEgMCA1LTIuMjM5IDUtNXMtMi4yMzktNS01LTVoLTZ6IiBmaWxsPSIjMWUxYjJlIi8+Cjwvc3ZnPgo=">
+
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="DumbProjects - AI Web App Portfolio">
-    <meta property="og:description" content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
+    <meta property="og:description"
+        content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
     <meta property="og:image" content="https://yourdomain.com/og-image.svg">
     <meta property="og:url" content="https://yourdomain.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DumbProjects">
-    
+
     <!-- Twitter Card meta tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DumbProjects - AI Web App Portfolio">
-    <meta name="twitter:description" content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
+    <meta name="twitter:description"
+        content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
     <meta name="twitter:image" content="https://yourdomain.com/og-image.svg">
     <style>
         * {
@@ -114,7 +119,7 @@
             justify-content: center;
             text-align: center;
             position: relative;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.15) 0%, transparent 50%);
         }
@@ -327,6 +332,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -334,8 +340,13 @@
         }
 
         @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
         }
 
         /* Mobile Responsive */
@@ -387,7 +398,6 @@
                 padding: 3rem 1rem;
             }
         }
-        }
 
         /* Smooth scrolling */
         html {
@@ -413,6 +423,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -431,7 +442,8 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Building Weird & Wonderful Things</h1>
-            <p>Welcome to my digital playground! I'm experimenting with AI to create quirky web apps, silly tools, and delightfully dumb projects that somehow end up being pretty cool.</p>
+            <p>Welcome to my digital playground! I'm experimenting with AI to create quirky web apps, silly tools, and
+                delightfully dumb projects that somehow end up being pretty cool.</p>
             <a href="#projects" class="cta-button">See the Dumb Stuff</a>
         </div>
     </section>
@@ -441,23 +453,28 @@
         <div class="container">
             <h2 class="section-title">The Dumb Stuff ✨</h2>
             <p class="section-subtitle">A collection of AI experiments that somehow work pretty well</p>
-            
+
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">🎮</div>
                     <div class="project-content">
                         <h3 class="project-title">AI Game Collection</h3>
-                        <p class="project-description">A collection of 15+ browser-based games created entirely with AI assistance! From classic Snake and Minesweeper to unique puzzles like Wave Guide and Circle Tap, all with a modern dark theme and responsive design.</p>
+                        <p class="project-description">A collection of 15+ browser-based games created entirely with AI
+                            assistance! From classic Snake and Minesweeper to unique puzzles like Wave Guide and Circle
+                            Tap, all with a modern dark theme and responsive design.</p>
                         <div class="project-tags">
                             <span class="tag">HTML</span>
                             <span class="tag">Vanilla JS</span>
                             <span class="tag">PWA</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://aigamecollection.com" class="project-link" target="_blank" rel="noopener noreferrer">Play Games</a>
-                            <a href="https://github.com/jeremehancock/AI-Game-Collection" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://aigamecollection.com" class="project-link" target="_blank"
+                                rel="noopener noreferrer">Play Games</a>
+                            <a href="https://github.com/jeremehancock/AI-Game-Collection" class="project-link"
+                                target="_blank" rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
@@ -469,16 +486,20 @@
                     <div class="project-image">🎬</div>
                     <div class="project-content">
                         <h3 class="project-title">Posteria</h3>
-                        <p class="project-description">Your Plex library's poster collection deserves better! A slick web app that lets you organize, upload, and manage custom movie and TV show posters. It even grabs artwork from TMDB and Fanart.tv automatically. Plex poster chaos, solved!</p>
+                        <p class="project-description">Your Plex library's poster collection deserves better! A slick
+                            web app that lets you organize, upload, and manage custom movie and TV show posters. It even
+                            grabs artwork from TMDB and Fanart.tv automatically. Plex poster chaos, solved!</p>
                         <div class="project-tags">
                             <span class="tag">PHP</span>
                             <span class="tag">Docker</span>
                             <span class="tag">Plex API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Posteria" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/jeremehancock/Posteria" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
@@ -490,16 +511,21 @@
                     <div class="project-image">📺</div>
                     <div class="project-content">
                         <h3 class="project-title">Glimpse</h3>
-                        <p class="project-description">A gorgeous web interface for browsing your Plex, Jellyfin, or Emby media libraries! Features movie trailers, cast info, genre filters, and a "roll the dice" random picker. Multi-server support with automatic theming. Your media collection has never looked this good!</p>
+                        <p class="project-description">A gorgeous web interface for browsing your Plex, Jellyfin, or
+                            Emby media libraries! Features movie trailers, cast info, genre filters, and a "roll the
+                            dice" random picker. Multi-server support with automatic theming. Your media collection has
+                            never looked this good!</p>
                         <div class="project-tags">
                             <span class="tag">HTML</span>
                             <span class="tag">Python</span>
                             <span class="tag">Docker</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Glimpse" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/jeremehancock/Glimpse" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
@@ -511,16 +537,21 @@
                     <div class="project-image">💻</div>
                     <div class="project-content">
                         <h3 class="project-title">CLIX</h3>
-                        <p class="project-description">Who needs a fancy GUI when you have the terminal? A slick command-line Plex media player that lets you browse and stream your entire library with just your keyboard. Features fuzzy search, auto-updates, and that satisfying terminal aesthetic. Linux nerds rejoice!</p>
+                        <p class="project-description">Who needs a fancy GUI when you have the terminal? A slick
+                            command-line Plex media player that lets you browse and stream your entire library with just
+                            your keyboard. Features fuzzy search, auto-updates, and that satisfying terminal aesthetic.
+                            Linux nerds rejoice!</p>
                         <div class="project-tags">
                             <span class="tag">Bash</span>
                             <span class="tag">Terminal UI</span>
                             <span class="tag">Plex API</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/CLIX" class="project-link" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/jeremehancock/CLIX" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
@@ -532,16 +563,21 @@
                     <div class="project-image">📊</div>
                     <div class="project-content">
                         <h3 class="project-title">Libretto</h3>
-                        <p class="project-description">Your Plex library's personal data export wizard! Transforms your entire media collection into beautiful CSV spreadsheets with cast info, ratings, technical specs, and more. Perfect for data nerds who want to analyze their 47TB of totally legally acquired media!</p>
+                        <p class="project-description">Your Plex library's personal data export wizard! Transforms your
+                            entire media collection into beautiful CSV spreadsheets with cast info, ratings, technical
+                            specs, and more. Perfect for data nerds who want to analyze their 47TB of totally legally
+                            acquired media!</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">CSV Export</span>
                             <span class="tag">Data Analysis</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Libretto" class="project-link">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <a href="https://github.com/jeremehancock/Libretto" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
@@ -553,16 +589,48 @@
                     <div class="project-image">🖥️</div>
                     <div class="project-content">
                         <h3 class="project-title">Ludanta</h3>
-                        <p class="project-description">A terminal-based media server activity monitor for your Plex and Jellyfin servers! View what's currently streaming across all your servers with color-coded output, transcoding alerts, and real-time updates. Perfect for admins who want a quick overview of server activity right from the command line!</p>
+                        <p class="project-description">A terminal-based media server activity monitor for your Plex and
+                            Jellyfin servers! View what's currently streaming across all your servers with color-coded
+                            output, transcoding alerts, and real-time updates. Perfect for admins who want a quick
+                            overview of server activity right from the command line!</p>
                         <div class="project-tags">
                             <span class="tag">Bash</span>
                             <span class="tag">Real-time</span>
                             <span class="tag">Multi-Server</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Ludanta" class="project-link">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            <a href="https://github.com/jeremehancock/Ludanta" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">😀</div>
+                    <div class="project-content">
+                        <h3 class="project-title">EmojiFind</h3>
+                        <p class="project-description">Find any emoji instantly! A beautiful, fast, and intuitive emoji
+                            search tool with lightning-fast keyword matching, dark/light themes, one-click copy, recent
+                            history, and mobile optimization. PWA-ready and works offline too!</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">Vanilla JS</span>
+                            <span class="tag">PWA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://emojifind.dumbprojects.com" class="project-link" target="_blank"
+                                rel="noopener noreferrer">Try it Live</a>
+                            <a href="https://github.com/jeremehancock/EmojiFind" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                 </svg>
                                 GitHub
                             </a>
@@ -578,16 +646,23 @@
         <div class="container">
             <div class="about-content">
                 <h2 class="section-title">The Story Behind the Madness</h2>
-                <p>Hey there! Welcome to my corner of the internet where "dumb" ideas somehow turn into pretty cool things. I started this collection because I kept building weird little web apps powered by AI, and my friends kept saying "you should put these somewhere!"</p>
-                <p>So here we are! These projects range from genuinely useful to "why did you make this?" but they're all built with love, curiosity, and probably too much coffee. Each one taught me something new about AI, web development, or just how to have fun while coding.</p>
-                <p>The best part? Most of these started as quick experiments that got way out of hand. Turns out when you give AI some creative freedom, beautiful chaos happens. 🎨✨</p>
+                <p>Hey there! Welcome to my corner of the internet where "dumb" ideas somehow turn into pretty cool
+                    things. I started this collection because I kept building weird little web apps powered by AI, and
+                    my friends kept saying "you should put these somewhere!"</p>
+                <p>So here we are! These projects range from genuinely useful to "why did you make this?" but they're
+                    all built with love, curiosity, and probably too much coffee. Each one taught me something new about
+                    AI, web development, or just how to have fun while coding.</p>
+                <p>The best part? Most of these started as quick experiments that got way out of hand. Turns out when
+                    you give AI some creative freedom, beautiful chaos happens. 🎨✨</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 DumbProjects. Made with ❤️, ☕, and 🤖 by <a href="https://jeremehancock.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-purple); text-decoration: none;">Jereme Hancock</a>.</p>
+        <p>&copy; 2025 DumbProjects. Made with ❤️, ☕, and 🤖 by <a href="https://jeremehancock.com" target="_blank"
+                rel="noopener noreferrer" style="color: var(--accent-purple); text-decoration: none;">Jereme
+                Hancock</a>.</p>
     </footer>
 
     <script>
@@ -656,4 +731,5 @@
         });
     </script>
 </body>
+
 </html>
