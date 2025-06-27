@@ -105,8 +105,11 @@
             font-weight: 500;
         }
 
-        .nav-link:hover {
-            color: var(--accent-color);
+        /* Only apply hover effects on devices with true hover capability */
+        @media (hover: hover) and (pointer: fine) {
+            .nav-link:hover {
+                color: var(--accent-color);
+            }
         }
 
         .mobile-menu-btn {
@@ -167,9 +170,12 @@
             box-shadow: 0 8px 32px rgba(168, 85, 247, 0.4), 0 4px 16px rgba(96, 165, 250, 0.2);
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 48px rgba(168, 85, 247, 0.5), 0 6px 24px rgba(96, 165, 250, 0.3);
+        /* Only apply hover effects on devices with true hover capability */
+        @media (hover: hover) and (pointer: fine) {
+            .cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 48px rgba(168, 85, 247, 0.5), 0 6px 24px rgba(96, 165, 250, 0.3);
+            }
         }
 
         /* Projects Section */
@@ -219,9 +225,12 @@
             height: 100%;
         }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        /* Only apply hover effects on devices with true hover capability */
+        @media (hover: hover) and (pointer: fine) {
+            .project-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            }
         }
 
         .project-image {
@@ -302,8 +311,11 @@
             gap: 4px;
         }
 
-        .project-link:hover {
-            color: var(--primary-text);
+        /* Only apply hover effects on devices with true hover capability */
+        @media (hover: hover) and (pointer: fine) {
+            .project-link:hover {
+                color: var(--primary-text);
+            }
         }
 
         /* About Section */
@@ -885,6 +897,20 @@
             }
         });
     </script>
+
+    <!-- Default Statcounter code for DumbProjects https://dumbprojects.com -->
+    <script type="text/javascript">
+        var sc_project = 13147109;
+        var sc_invisible = 1;
+        var sc_security = "2882673e"; 
+    </script>
+    <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="https://c.statcounter.com/13147109/0/2882673e/1/" alt="Web Analytics"
+                    referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+    <!-- End of Statcounter Code -->
 </body>
 
 </html>
