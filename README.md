@@ -38,7 +38,9 @@ Who needs a GUI? A slick command-line Plex media player with fuzzy search and th
 
 Find any emoji instantly! Lightning-fast search with dark/light themes, one-click copy, and mobile optimization.
 
-_...and more terminal tools, data exporters, and random experiments!_
+### 📱 **QR**
+
+Generate high-quality QR codes instantly and scan them with your phone's camera! Features real-time scanning, smart URL detection, and a sleek terminal-inspired dark theme that works offline.
 
 ## ✨ The Philosophy
 
