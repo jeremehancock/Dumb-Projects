@@ -296,13 +296,15 @@
             cursor: help;
             user-select: none;
             display: inline-block;
+            z-index: 1;
         }
 
         .ai-rewrite-badge .tooltip {
             visibility: hidden;
             opacity: 0;
-            position: absolute;
-            bottom: calc(100% + 8px);
+            position: fixed;
+            top: auto;
+            bottom: auto;
             left: 50%;
             transform: translateX(-50%);
             background: #2d2640;
@@ -316,7 +318,7 @@
             white-space: normal;
             width: 90vw;
             max-width: 90vw;
-            z-index: 1000;
+            z-index: 10000;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
             transition: opacity 0.2s ease, visibility 0.2s ease;
@@ -730,6 +732,15 @@
                     console.log('Found badges:', badges.length);
 
                     badges.forEach(badge => {
+                        const tooltip = badge.querySelector('.tooltip');
+
+                        // Function to position tooltip
+                        const positionTooltip = () => {
+                            const rect = badge.getBoundingClientRect();
+                            const tooltipHeight = tooltip.offsetHeight || 60; // Estimate if not visible
+                            tooltip.style.top = `${rect.top - tooltipHeight - 8}px`;
+                        };
+
                         // Handle tap/click for mobile and desktop
                         badge.addEventListener('click', (e) => {
                             e.preventDefault();
@@ -743,8 +754,16 @@
                             });
 
                             // Toggle this tooltip
-                            badge.classList.toggle('tooltip-active');
+                            const isActive = badge.classList.toggle('tooltip-active');
+                            if (isActive) {
+                                positionTooltip();
+                            }
                             console.log('Badge clicked, tooltip-active:', badge.classList.contains('tooltip-active'));
+                        });
+
+                        // Position tooltip on hover for desktop
+                        badge.addEventListener('mouseenter', () => {
+                            positionTooltip();
                         });
 
                         // Handle keyboard accessibility
@@ -763,6 +782,25 @@
                                 badge.classList.remove('tooltip-active');
                             });
                         }
+                    });
+
+                    // Reposition tooltips on scroll and resize
+                    window.addEventListener('scroll', () => {
+                        document.querySelectorAll('.ai-rewrite-badge.tooltip-active, .ai-rewrite-badge:hover').forEach(badge => {
+                            const tooltip = badge.querySelector('.tooltip');
+                            const rect = badge.getBoundingClientRect();
+                            const tooltipHeight = tooltip.offsetHeight || 60;
+                            tooltip.style.top = `${rect.top - tooltipHeight - 8}px`;
+                        });
+                    });
+
+                    window.addEventListener('resize', () => {
+                        document.querySelectorAll('.ai-rewrite-badge.tooltip-active, .ai-rewrite-badge:hover').forEach(badge => {
+                            const tooltip = badge.querySelector('.tooltip');
+                            const rect = badge.getBoundingClientRect();
+                            const tooltipHeight = tooltip.offsetHeight || 60;
+                            tooltip.style.top = `${rect.top - tooltipHeight - 8}px`;
+                        });
                     });
                 }, 100);
 
