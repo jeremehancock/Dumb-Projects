@@ -296,15 +296,14 @@
             cursor: help;
             user-select: none;
             display: inline-block;
-            z-index: 1;
+            z-index: 2;
         }
 
         .ai-rewrite-badge .tooltip {
             visibility: hidden;
             opacity: 0;
-            position: fixed;
-            top: auto;
-            bottom: auto;
+            position: absolute;
+            bottom: calc(100% + 10px);
             left: 50%;
             transform: translateX(-50%);
             background: #2d2640;
@@ -318,13 +317,37 @@
             white-space: nowrap;
             width: auto;
             max-width: 600px;
-            z-index: 10000;
+            z-index: 10001;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
             transition: opacity 0.2s ease, visibility 0.2s ease;
             pointer-events: none;
             line-height: 1.4;
             text-align: center;
+        }
+
+        .ai-rewrite-badge .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #2d2640;
+        }
+
+        /* Show tooltip on hover for desktop */
+        @media (hover: hover) and (pointer: fine) {
+            .ai-rewrite-badge:hover .tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        /* Show tooltip when active class is added (for mobile tap) */
+        .ai-rewrite-badge.tooltip-active .tooltip {
+            visibility: visible;
+            opacity: 1;
         }
 
         /* Mobile: Make tooltip 90% width and allow wrapping */
@@ -741,15 +764,6 @@
                     console.log('Found badges:', badges.length);
 
                     badges.forEach(badge => {
-                        const tooltip = badge.querySelector('.tooltip');
-
-                        // Function to position tooltip
-                        const positionTooltip = () => {
-                            const rect = badge.getBoundingClientRect();
-                            const tooltipHeight = tooltip.offsetHeight || 60; // Estimate if not visible
-                            tooltip.style.top = `${rect.top - tooltipHeight - 8}px`;
-                        };
-
                         // Handle tap/click for mobile and desktop
                         badge.addEventListener('click', (e) => {
                             e.preventDefault();
@@ -763,16 +777,8 @@
                             });
 
                             // Toggle this tooltip
-                            const isActive = badge.classList.toggle('tooltip-active');
-                            if (isActive) {
-                                positionTooltip();
-                            }
+                            badge.classList.toggle('tooltip-active');
                             console.log('Badge clicked, tooltip-active:', badge.classList.contains('tooltip-active'));
-                        });
-
-                        // Position tooltip on hover for desktop
-                        badge.addEventListener('mouseenter', () => {
-                            positionTooltip();
                         });
 
                         // Handle keyboard accessibility
@@ -791,25 +797,6 @@
                                 badge.classList.remove('tooltip-active');
                             });
                         }
-                    });
-
-                    // Reposition tooltips on scroll and resize
-                    window.addEventListener('scroll', () => {
-                        document.querySelectorAll('.ai-rewrite-badge.tooltip-active, .ai-rewrite-badge:hover').forEach(badge => {
-                            const tooltip = badge.querySelector('.tooltip');
-                            const rect = badge.getBoundingClientRect();
-                            const tooltipHeight = tooltip.offsetHeight || 60;
-                            tooltip.style.top = `${rect.top - tooltipHeight - 8}px`;
-                        });
-                    });
-
-                    window.addEventListener('resize', () => {
-                        document.querySelectorAll('.ai-rewrite-badge.tooltip-active, .ai-rewrite-badge:hover').forEach(badge => {
-                            const tooltip = badge.querySelector('.tooltip');
-                            const rect = badge.getBoundingClientRect();
-                            const tooltipHeight = tooltip.offsetHeight || 60;
-                            tooltip.style.top = `${rect.top - tooltipHeight - 8}px`;
-                        });
                     });
                 }, 100);
 
