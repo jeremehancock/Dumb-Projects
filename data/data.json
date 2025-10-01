@@ -169,7 +169,7 @@
       "emoji": "🛣️",
       "title": "Roadside America API",
       "description": "Explore vintage Americana through random photos from the John Margolies Roadside America Photograph Archive at the Library of Congress! Discover nostalgic roadside attractions, diners, motels, and quirky architecture from across America. A digital road trip through history, one random photo at a time.",
-      "tags": ["HTML", "Vanilla JS", "API"],
+      "tags": ["HTML", "Vanilla JS", "PHP"],
       "aiRewrite": true,
       "links": [
         {
