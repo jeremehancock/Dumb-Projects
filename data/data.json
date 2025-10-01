@@ -134,6 +134,7 @@
       "title": "RandomGoat",
       "description": "Need a smile? Get random goat GIFs in glorious fullscreen! A delightfully simple site that does exactly one thing: shows you adorable, funny, and majestic goats doing goat things.",
       "tags": ["HTML", "Vanilla JS", "GIFs"],
+      "aiRewrite": true,
       "links": [
         {
           "text": "See the Goats",
@@ -151,6 +152,7 @@
       "title": "Out of Context",
       "description": "Random fullscreen videos with absolutely zero context! A collection of wonderfully weird video clips that will leave you confused, entertained, and asking \"what did I just watch?\" Community-powered through GitHub submissions, because the internet's weirdness is a collaborative effort.",
       "tags": ["HTML", "Vanilla JS", "Community-driven"],
+      "aiRewrite": true,
       "links": [
         {
           "text": "Watch the Chaos",
@@ -168,6 +170,7 @@
       "title": "Roadside America API",
       "description": "Explore vintage Americana through random photos from the John Margolies Roadside America Photograph Archive at the Library of Congress! Discover nostalgic roadside attractions, diners, motels, and quirky architecture from across America. A digital road trip through history, one random photo at a time.",
       "tags": ["HTML", "Vanilla JS", "API"],
+      "aiRewrite": true,
       "links": [
         {
           "text": "Take a Road Trip",
