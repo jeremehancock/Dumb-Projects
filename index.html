@@ -738,7 +738,44 @@
                     const badges = document.querySelectorAll('.ai-rewrite-badge');
                     console.log('Found badges:', badges.length);
 
+                    // Function to position tooltip to prevent overflow
+                    function positionTooltip(badge) {
+                        const tooltip = badge.querySelector('.tooltip');
+                        if (!tooltip) return;
+
+                        const badgeRect = badge.getBoundingClientRect();
+                        const tooltipRect = tooltip.getBoundingClientRect();
+                        const viewportWidth = window.innerWidth;
+                        const padding = 16; // Padding from screen edge
+
+                        // Reset any previous adjustments
+                        tooltip.style.left = '50%';
+                        tooltip.style.right = 'auto';
+                        tooltip.style.transform = 'translateX(-50%)';
+
+                        // Get the updated position after reset
+                        const updatedRect = tooltip.getBoundingClientRect();
+
+                        // Check if tooltip overflows on the right
+                        if (updatedRect.right > viewportWidth - padding) {
+                            tooltip.style.left = 'auto';
+                            tooltip.style.right = '0';
+                            tooltip.style.transform = 'translateX(0)';
+                        }
+                        // Check if tooltip overflows on the left
+                        else if (updatedRect.left < padding) {
+                            tooltip.style.left = '0';
+                            tooltip.style.right = 'auto';
+                            tooltip.style.transform = 'translateX(0)';
+                        }
+                    }
+
                     badges.forEach(badge => {
+                        // Position tooltip on hover (for desktop)
+                        badge.addEventListener('mouseenter', () => {
+                            positionTooltip(badge);
+                        });
+
                         // Handle tap/click for mobile and desktop
                         badge.addEventListener('click', (e) => {
                             e.preventDefault();
@@ -752,7 +789,14 @@
                             });
 
                             // Toggle this tooltip
+                            const wasActive = badge.classList.contains('tooltip-active');
                             badge.classList.toggle('tooltip-active');
+
+                            // Position tooltip after toggle
+                            if (!wasActive) {
+                                setTimeout(() => positionTooltip(badge), 10);
+                            }
+
                             console.log('Badge clicked, tooltip-active:', badge.classList.contains('tooltip-active'));
                         });
 
@@ -772,6 +816,13 @@
                                 badge.classList.remove('tooltip-active');
                             });
                         }
+                    });
+
+                    // Reposition tooltips on window resize
+                    window.addEventListener('resize', () => {
+                        document.querySelectorAll('.ai-rewrite-badge.tooltip-active').forEach(badge => {
+                            positionTooltip(badge);
+                        });
                     });
                 }, 100);
 
