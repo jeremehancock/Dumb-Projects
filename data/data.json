@@ -138,6 +138,11 @@
         {
           "text": "See the Goats",
           "url": "https://randomgoat.com"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/RandomGoat.com",
+          "isGitHub": true
         }
       ]
     },
@@ -150,6 +155,11 @@
         {
           "text": "Watch the Chaos",
           "url": "https://outofcontext.dumbprojects.com"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/Out-of-Context-TV",
+          "isGitHub": true
         }
       ]
     },
@@ -162,6 +172,11 @@
         {
           "text": "Take a Road Trip",
           "url": "https://roadside-america.dumbprojects.com"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/Roadside-America-API",
+          "isGitHub": true
         }
       ]
     }
