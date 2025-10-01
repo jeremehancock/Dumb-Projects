@@ -320,6 +320,8 @@
             transition: opacity 0.2s ease, visibility 0.2s ease;
             pointer-events: none;
             line-height: 1.4;
+            width: 300px;
+            text-wrap: auto;
         }
 
         .ai-rewrite-badge .tooltip::after {
@@ -337,8 +339,6 @@
             .ai-rewrite-badge:hover .tooltip {
                 visibility: visible;
                 opacity: 1;
-                width: 300px;
-                text-wrap: auto;
             }
         }
 
@@ -346,8 +346,6 @@
         .ai-rewrite-badge.tooltip-active .tooltip {
             visibility: visible;
             opacity: 1;
-            width: 300px;
-            text-wrap: auto;
         }
 
         /* Make tooltip wrap on smaller screens */
