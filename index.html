@@ -345,6 +345,14 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* Loading state */
+        .loading {
+            text-align: center;
+            color: var(--secondary-text);
+            padding: 3rem;
+            font-size: 1.1rem;
+        }
+
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -519,244 +527,8 @@
             <h2 class="section-title">The Dumb Stuff ✨</h2>
             <p class="section-subtitle">A collection of AI experiments that somehow work pretty well</p>
 
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">🎮</div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Game Collection</h3>
-                        <p class="project-description">A collection of 15+ browser-based games created entirely with AI
-                            assistance! From classic Snake and Minesweeper to unique puzzles like Wave Guide and Circle
-                            Tap, all with a modern dark theme and responsive design.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">Vanilla JS</span>
-                            <span class="tag">PWA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://aigamecollection.com" class="project-link" target="_blank"
-                                rel="noopener noreferrer">Play Games</a>
-                            <a href="https://github.com/jeremehancock/AI-Game-Collection" class="project-link"
-                                target="_blank" rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">🎬</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Posteria</h3>
-                        <p class="project-description">Your Plex library's poster collection deserves better! A slick
-                            web app that lets you organize, upload, and manage custom movie and TV show posters. It even
-                            grabs artwork from TMDB and Fanart.tv automatically. Plex poster chaos, solved!</p>
-                        <div class="project-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Plex API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Posteria" class="project-link" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">📺</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Glimpse</h3>
-                        <p class="project-description">A gorgeous web interface for browsing your Plex, Jellyfin, or
-                            Emby media libraries! Features movie trailers, cast info, genre filters, and a "roll the
-                            dice" random picker. Multi-server support with automatic theming. Your media collection has
-                            never looked this good!</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Glimpse" class="project-link" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">💻</div>
-                    <div class="project-content">
-                        <h3 class="project-title">CLIX</h3>
-                        <p class="project-description">Who needs a fancy GUI when you have the terminal? A slick
-                            command-line Plex media player that lets you browse and stream your entire library with just
-                            your keyboard. Features fuzzy search, auto-updates, and that satisfying terminal aesthetic.
-                            Linux nerds rejoice!</p>
-                        <div class="project-tags">
-                            <span class="tag">Bash</span>
-                            <span class="tag">Terminal UI</span>
-                            <span class="tag">Plex API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jeremehancock/CLIX" class="project-link" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">💻</div>
-                    <div class="project-content">
-                        <h3 class="project-title">MovieCLI</h3>
-                        <p class="project-description">Browse and stream movies like a hacker in the movies! A sleek
-                            command-line interface for viewing, searching, and playing movies from remote servers.
-                            Perfect for when you want that authentic terminal aesthetic while managing your media
-                            collection.</p>
-                        <div class="project-tags">
-                            <span class="tag">Bash</span>
-                            <span class="tag">SSH</span>
-                            <span class="tag">Remote Media</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jeremehancock/moviecli" class="project-link" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">📊</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Libretto</h3>
-                        <p class="project-description">Your Plex library's personal data export wizard! Transforms your
-                            entire media collection into beautiful CSV spreadsheets with cast info, ratings, technical
-                            specs, and more. Perfect for data nerds who want to analyze their 47TB of totally legally
-                            acquired media!</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">CSV Export</span>
-                            <span class="tag">Data Analysis</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Libretto" class="project-link" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">🖥️</div>
-                    <div class="project-content">
-                        <h3 class="project-title">Ludanta</h3>
-                        <p class="project-description">A terminal-based media server activity monitor for your Plex and
-                            Jellyfin servers! View what's currently streaming across all your servers with color-coded
-                            output, transcoding alerts, and real-time updates. Perfect for admins who want a quick
-                            overview of server activity right from the command line!</p>
-                        <div class="project-tags">
-                            <span class="tag">Bash</span>
-                            <span class="tag">Real-time</span>
-                            <span class="tag">Multi-Server</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/jeremehancock/Ludanta" class="project-link" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">😀</div>
-                    <div class="project-content">
-                        <h3 class="project-title">EmojiFind</h3>
-                        <p class="project-description">Find any emoji instantly! A beautiful, fast, and intuitive emoji
-                            search tool with lightning-fast keyword matching, dark/light themes, one-click copy, recent
-                            history, and mobile optimization.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">Vanilla JS</span>
-                            <span class="tag">PWA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://emojifind.dumbprojects.com" class="project-link" target="_blank"
-                                rel="noopener noreferrer">Try it Live</a>
-                            <a href="https://github.com/jeremehancock/EmojiFind" class="project-link" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-image">📱</div>
-                    <div class="project-content">
-                        <h3 class="project-title">QR</h3>
-                        <p class="project-description">Generate high-quality QR codes instantly and scan them with your
-                            phone's camera! Features real-time scanning, smart URL detection, one-click downloads, and a
-                            sleek terminal-inspired dark theme. Works offline as a PWA and processes everything locally
-                            for privacy.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">Vanilla JS</span>
-                            <span class="tag">PWA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://qr.dumbprojects.com" class="project-link" target="_blank"
-                                rel="noopener noreferrer">Try it Live</a>
-                            <a href="https://github.com/jeremehancock/qr" class="project-link" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="projects-grid" id="projects-grid">
+                <div class="loading">Loading projects...</div>
             </div>
         </div>
     </section>
@@ -784,6 +556,94 @@
     </footer>
 
     <script>
+        // GitHub icon SVG
+        const githubIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>`;
+
+        // Function to create a project card
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+            const links = project.links.map(link => {
+                const icon = link.isGitHub ? githubIcon : '';
+                return `
+                    <a href="${link.url}" class="project-link" target="_blank" rel="noopener noreferrer">
+                        ${icon}
+                        ${link.text}
+                    </a>
+                `;
+            }).join('');
+
+            const tags = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+
+            card.innerHTML = `
+                <div class="project-image">${project.emoji}</div>
+                <div class="project-content">
+                    <h3 class="project-title">${project.title}</h3>
+                    <p class="project-description">${project.description}</p>
+                    <div class="project-tags">
+                        ${tags}
+                    </div>
+                    <div class="project-links">
+                        ${links}
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Function to load and display projects
+        async function loadProjects() {
+            const projectsGrid = document.getElementById('projects-grid');
+
+            try {
+                const response = await fetch('data/data.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load projects');
+                }
+
+                const data = await response.json();
+                projectsGrid.innerHTML = '';
+
+                data.projects.forEach(project => {
+                    const card = createProjectCard(project);
+                    projectsGrid.appendChild(card);
+                });
+
+                // Animate project cards on scroll
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, observerOptions);
+
+                document.querySelectorAll('.project-card').forEach(card => {
+                    observer.observe(card);
+                });
+
+            } catch (error) {
+                console.error('Error loading projects:', error);
+                projectsGrid.innerHTML = '<div class="loading">Failed to load projects. Please try again later.</div>';
+            }
+        }
+
+        // Load projects when the page loads
+        loadProjects();
+
         // Fix viewport height for mobile devices
         function setVH() {
             let vh = window.innerHeight * 0.01;
@@ -832,29 +692,6 @@
             } else {
                 header.style.background = 'rgba(10, 10, 10, 0.95)';
             }
-        });
-
-        // Animate project cards on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Add animation to project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
         });
 
         // Smooth scrolling for anchor links

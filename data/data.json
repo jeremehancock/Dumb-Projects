@@ -1,0 +1,133 @@
+{
+  "projects": [
+    {
+      "emoji": "🎮",
+      "title": "AI Game Collection",
+      "description": "A collection of 15+ browser-based games created entirely with AI assistance! From classic Snake and Minesweeper to unique puzzles like Wave Guide and Circle Tap, all with a modern dark theme and responsive design.",
+      "tags": ["HTML", "Vanilla JS", "PWA"],
+      "links": [
+        {
+          "text": "Play Games",
+          "url": "https://aigamecollection.com"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/AI-Game-Collection",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "🎬",
+      "title": "Posteria",
+      "description": "Your Plex library's poster collection deserves better! A slick web app that lets you organize, upload, and manage custom movie and TV show posters. It even grabs artwork from TMDB and Fanart.tv automatically. Plex poster chaos, solved!",
+      "tags": ["PHP", "Docker", "Plex API"],
+      "links": [
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/Posteria",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "📺",
+      "title": "Glimpse",
+      "description": "A gorgeous web interface for browsing your Plex, Jellyfin, or Emby media libraries! Features movie trailers, cast info, genre filters, and a \"roll the dice\" random picker. Multi-server support with automatic theming. Your media collection has never looked this good!",
+      "tags": ["HTML", "Python", "Docker"],
+      "links": [
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/Glimpse",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "💻",
+      "title": "CLIX",
+      "description": "Who needs a fancy GUI when you have the terminal? A slick command-line Plex media player that lets you browse and stream your entire library with just your keyboard. Features fuzzy search, auto-updates, and that satisfying terminal aesthetic. Linux nerds rejoice!",
+      "tags": ["Bash", "Terminal UI", "Plex API"],
+      "links": [
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/CLIX",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "💻",
+      "title": "MovieCLI",
+      "description": "Browse and stream movies like a hacker in the movies! A sleek command-line interface for viewing, searching, and playing movies from remote servers. Perfect for when you want that authentic terminal aesthetic while managing your media collection.",
+      "tags": ["Bash", "SSH", "Remote Media"],
+      "links": [
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/moviecli",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "📊",
+      "title": "Libretto",
+      "description": "Your Plex library's personal data export wizard! Transforms your entire media collection into beautiful CSV spreadsheets with cast info, ratings, technical specs, and more. Perfect for data nerds who want to analyze their 47TB of totally legally acquired media!",
+      "tags": ["Python", "CSV Export", "Data Analysis"],
+      "links": [
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/Libretto",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "🖥️",
+      "title": "Ludanta",
+      "description": "A terminal-based media server activity monitor for your Plex and Jellyfin servers! View what's currently streaming across all your servers with color-coded output, transcoding alerts, and real-time updates. Perfect for admins who want a quick overview of server activity right from the command line!",
+      "tags": ["Bash", "Real-time", "Multi-Server"],
+      "links": [
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/Ludanta",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "😀",
+      "title": "EmojiFind",
+      "description": "Find any emoji instantly! A beautiful, fast, and intuitive emoji search tool with lightning-fast keyword matching, dark/light themes, one-click copy, recent history, and mobile optimization.",
+      "tags": ["HTML", "Vanilla JS", "PWA"],
+      "links": [
+        {
+          "text": "Try it Live",
+          "url": "https://emojifind.dumbprojects.com"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/EmojiFind",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "📱",
+      "title": "QR",
+      "description": "Generate high-quality QR codes instantly and scan them with your phone's camera! Features real-time scanning, smart URL detection, one-click downloads, and a sleek terminal-inspired dark theme. Works offline as a PWA and processes everything locally for privacy.",
+      "tags": ["HTML", "Vanilla JS", "PWA"],
+      "links": [
+        {
+          "text": "Try it Live",
+          "url": "https://qr.dumbprojects.com"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/qr",
+          "isGitHub": true
+        }
+      ]
+    }
+  ]
+}
