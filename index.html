@@ -216,13 +216,18 @@
         .project-card {
             background: var(--accent-bg);
             border-radius: 20px;
-            overflow: hidden;
+            overflow: visible;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             display: flex;
             flex-direction: column;
             height: 100%;
+        }
+
+        .project-image {
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
         }
 
         /* Only apply hover effects on devices with true hover capability */
@@ -272,6 +277,7 @@
             align-items: center;
             gap: 0.5rem;
             flex-wrap: wrap;
+            position: relative;
         }
 
         .ai-rewrite-badge {
@@ -285,6 +291,66 @@
             letter-spacing: 0.5px;
             border: 1px solid rgba(16, 185, 129, 0.5);
             box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+            position: relative;
+            cursor: help;
+            user-select: none;
+            display: inline-block;
+        }
+
+        .ai-rewrite-badge .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2d2640;
+            color: var(--primary-text);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: normal;
+            text-transform: none;
+            letter-spacing: normal;
+            white-space: nowrap;
+            z-index: 1000;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+            pointer-events: none;
+            line-height: 1.4;
+        }
+
+        .ai-rewrite-badge .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: #2d2640;
+        }
+
+        /* Show tooltip on hover for desktop */
+        @media (hover: hover) and (pointer: fine) {
+            .ai-rewrite-badge:hover .tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        /* Show tooltip when active class is added (for mobile tap) */
+        .ai-rewrite-badge.tooltip-active .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Make tooltip wrap on smaller screens */
+        @media (max-width: 768px) {
+            .ai-rewrite-badge .tooltip {
+                white-space: normal;
+                max-width: 250px;
+            }
         }
 
         .project-description {
@@ -598,7 +664,12 @@
 
             const tags = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
 
-            const aiRewriteBadge = project.aiRewrite ? '<span class="ai-rewrite-badge">AI Rewrite</span>' : '';
+            const aiRewriteBadge = project.aiRewrite ? `
+                <span class="ai-rewrite-badge" role="button" tabindex="0" aria-label="AI Rewrite information">
+                    AI Rewrite
+                    <span class="tooltip">Not originally built with AI, but has been partially or completely rewritten using AI</span>
+                </span>
+            ` : '';
 
             card.innerHTML = `
                 <div class="project-image">${project.emoji}</div>
@@ -655,6 +726,39 @@
 
                 document.querySelectorAll('.project-card').forEach(card => {
                     observer.observe(card);
+                });
+
+                // Add mobile tap functionality for AI Rewrite badges
+                document.querySelectorAll('.ai-rewrite-badge').forEach(badge => {
+                    // Handle tap/click for mobile
+                    badge.addEventListener('click', (e) => {
+                        e.stopPropagation();
+
+                        // Close any other open tooltips
+                        document.querySelectorAll('.ai-rewrite-badge').forEach(otherBadge => {
+                            if (otherBadge !== badge) {
+                                otherBadge.classList.remove('tooltip-active');
+                            }
+                        });
+
+                        // Toggle this tooltip
+                        badge.classList.toggle('tooltip-active');
+                    });
+
+                    // Handle keyboard accessibility
+                    badge.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            badge.click();
+                        }
+                    });
+                });
+
+                // Close tooltips when clicking outside
+                document.addEventListener('click', () => {
+                    document.querySelectorAll('.ai-rewrite-badge').forEach(badge => {
+                        badge.classList.remove('tooltip-active');
+                    });
                 });
 
             } catch (error) {
