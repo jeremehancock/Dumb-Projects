@@ -223,6 +223,16 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            z-index: 1;
+        }
+
+        /* Increase z-index of card when tooltip is active */
+        .project-card:has(.ai-rewrite-badge:hover) {
+            z-index: 10000;
+        }
+
+        .project-card:has(.ai-rewrite-badge.tooltip-active) {
+            z-index: 10000;
         }
 
         .project-image {
