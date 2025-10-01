@@ -267,6 +267,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            overflow: visible;
         }
 
         .project-title {
@@ -312,13 +313,16 @@
             font-weight: normal;
             text-transform: none;
             letter-spacing: normal;
-            white-space: nowrap;
+            white-space: normal;
+            width: 90vw;
+            max-width: 90vw;
             z-index: 1000;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
             transition: opacity 0.2s ease, visibility 0.2s ease;
             pointer-events: none;
             line-height: 1.4;
+            text-align: center;
         }
 
         .ai-rewrite-badge .tooltip::after {
@@ -343,14 +347,6 @@
         .ai-rewrite-badge.tooltip-active .tooltip {
             visibility: visible;
             opacity: 1;
-        }
-
-        /* Make tooltip wrap on smaller screens */
-        @media (max-width: 768px) {
-            .ai-rewrite-badge .tooltip {
-                white-space: normal;
-                max-width: 250px;
-            }
         }
 
         .project-description {
@@ -729,37 +725,46 @@
                 });
 
                 // Add mobile tap functionality for AI Rewrite badges
-                document.querySelectorAll('.ai-rewrite-badge').forEach(badge => {
-                    // Handle tap/click for mobile
-                    badge.addEventListener('click', (e) => {
-                        e.stopPropagation();
+                setTimeout(() => {
+                    const badges = document.querySelectorAll('.ai-rewrite-badge');
+                    console.log('Found badges:', badges.length);
 
-                        // Close any other open tooltips
-                        document.querySelectorAll('.ai-rewrite-badge').forEach(otherBadge => {
-                            if (otherBadge !== badge) {
-                                otherBadge.classList.remove('tooltip-active');
-                            }
+                    badges.forEach(badge => {
+                        // Handle tap/click for mobile and desktop
+                        badge.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+
+                            // Close any other open tooltips
+                            document.querySelectorAll('.ai-rewrite-badge').forEach(otherBadge => {
+                                if (otherBadge !== badge) {
+                                    otherBadge.classList.remove('tooltip-active');
+                                }
+                            });
+
+                            // Toggle this tooltip
+                            badge.classList.toggle('tooltip-active');
+                            console.log('Badge clicked, tooltip-active:', badge.classList.contains('tooltip-active'));
                         });
 
-                        // Toggle this tooltip
-                        badge.classList.toggle('tooltip-active');
+                        // Handle keyboard accessibility
+                        badge.addEventListener('keydown', (e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                badge.click();
+                            }
+                        });
                     });
 
-                    // Handle keyboard accessibility
-                    badge.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            badge.click();
+                    // Close tooltips when clicking outside
+                    document.addEventListener('click', (e) => {
+                        if (!e.target.closest('.ai-rewrite-badge')) {
+                            document.querySelectorAll('.ai-rewrite-badge').forEach(badge => {
+                                badge.classList.remove('tooltip-active');
+                            });
                         }
                     });
-                });
-
-                // Close tooltips when clicking outside
-                document.addEventListener('click', () => {
-                    document.querySelectorAll('.ai-rewrite-badge').forEach(badge => {
-                        badge.classList.remove('tooltip-active');
-                    });
-                });
+                }, 100);
 
             } catch (error) {
                 console.error('Error loading projects:', error);
