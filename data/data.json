@@ -133,7 +133,7 @@
       "emoji": "🐐",
       "title": "RandomGoat",
       "description": "Need a smile? Get random goat GIFs in glorious fullscreen! A delightfully simple site that does exactly one thing: shows you adorable, funny, and majestic goats doing goat things.",
-      "tags": ["HTML", "Vanilla JS", "GIFs"],
+      "tags": ["HTML", "Vanilla JS", "PHP"],
       "aiRewrite": true,
       "links": [
         {
