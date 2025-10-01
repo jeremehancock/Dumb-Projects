@@ -320,25 +320,17 @@
             transition: opacity 0.2s ease, visibility 0.2s ease;
             pointer-events: none;
             line-height: 1.4;
-            width: 300px;
-            text-wrap: auto;
         }
 
-        .ai-rewrite-badge .tooltip::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            border: 6px solid transparent;
-            border-top-color: #2d2640;
-        }
+
 
         /* Show tooltip on hover for desktop */
         @media (hover: hover) and (pointer: fine) {
             .ai-rewrite-badge:hover .tooltip {
                 visibility: visible;
                 opacity: 1;
+                width: 300px;
+                text-wrap: auto;
             }
         }
 
@@ -346,6 +338,8 @@
         .ai-rewrite-badge.tooltip-active .tooltip {
             visibility: visible;
             opacity: 1;
+            width: 300px;
+            text-wrap: auto;
         }
 
         /* Make tooltip wrap on smaller screens */
