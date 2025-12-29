@@ -37,6 +37,10 @@
       "tags": ["HTML", "Python", "Docker"],
       "links": [
         {
+          "text": "My Glimpse",
+          "url": "https://glimpse.vitaminsocks.com"
+        },
+        {
           "text": "GitHub",
           "url": "https://github.com/jeremehancock/Glimpse",
           "isGitHub": true
