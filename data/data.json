@@ -48,6 +48,40 @@
       ]
     },
     {
+      "emoji": "🗄️",
+      "title": "homelab.md",
+      "description": "A single-file, offline-first web app for documenting your homelab infrastructure. Open index.html in any browser — no server, no dependencies, no internet required.",
+      "tags": ["HTML", "Vanilla JS"],
+      "links": [
+        {
+          "text": "My Homelab",
+          "url": "https://jereme.dev/homelab"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/homelab.md",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "🖥️",
+      "title": "whoami",
+      "description": "An interactive résumé that pretends to be a Linux terminal. It boots with an ASCII MOTD, gives you a real prompt, and lets visitors explore with the commands they already know — ls, cd, cat, man, and a cheeky whoami.",
+      "tags": ["HTML", "Vanilla JS"],
+      "links": [
+        {
+          "text": "See it Live",
+          "url": "https://whoami.jereme.dev"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/whoami-web",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
       "emoji": "💻",
       "title": "CLIX",
       "description": "Who needs a fancy GUI when you have the terminal? A slick command-line Plex media player that lets you browse and stream your entire library with just your keyboard. Features fuzzy search, auto-updates, and that satisfying terminal aesthetic. Linux nerds rejoice!",
@@ -129,6 +163,23 @@
         {
           "text": "GitHub",
           "url": "https://github.com/jeremehancock/qr",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "💬",
+      "title": "Shorthand",
+      "description": "Shorthand — Custom Shortcodes for Bludit Define a tag once, drop it anywhere in your pages and posts. Works with both the Markdown and HTML editors.",
+      "tags": ["Bludit", "Vanilla JS", "PHP"],
+      "links": [
+        {
+          "text": "See it in Action",
+          "url": "https://jereme.dev/shorthand/"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/Shorthand",
           "isGitHub": true
         }
       ]
