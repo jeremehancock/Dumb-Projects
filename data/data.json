@@ -67,7 +67,7 @@
     {
       "emoji": "🖥️",
       "title": "whoami",
-      "description": "An interactive résumé that pretends to be a Linux terminal. It boots with an ASCII MOTD, gives you a real prompt, and lets visitors explore with the commands they already know — ls, cd, cat, man, and a cheeky whoami.",
+      "description": "An interactive resume that pretends to be a Linux terminal. It boots with an ASCII MOTD, gives you a real prompt, and lets visitors explore with the commands they already know — ls, cd, cat, man, and a cheeky whoami.",
       "tags": ["HTML", "Vanilla JS"],
       "links": [
         {
@@ -77,6 +77,23 @@
         {
           "text": "GitHub",
           "url": "https://github.com/jeremehancock/whoami-web",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "🌐",
+      "title": "RetroCities",
+      "description": "A retro, GeoCities-style personal portfolio page — neon colors, a scrolling marquee, beveled Windows 95 panels, a starfield background, and 'Best viewed in Netscape' energy — built with plain HTML, CSS, and vanilla JavaScript. No frameworks, no build step.",
+      "tags": ["HTML", "Vanilla JS"],
+      "links": [
+        {
+          "text": "See it Live",
+          "url": "https://retrocities.jereme.dev"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/retrocities",
           "isGitHub": true
         }
       ]
@@ -146,23 +163,6 @@
         {
           "text": "GitHub",
           "url": "https://github.com/jeremehancock/EmojiFind",
-          "isGitHub": true
-        }
-      ]
-    },
-    {
-      "emoji": "📱",
-      "title": "QR",
-      "description": "Generate high-quality QR codes instantly and scan them with your phone's camera! Features real-time scanning, smart URL detection, one-click downloads, and a sleek terminal-inspired dark theme. Works offline as a PWA and processes everything locally for privacy.",
-      "tags": ["HTML", "Vanilla JS", "PWA"],
-      "links": [
-        {
-          "text": "Try it Live",
-          "url": "https://qr.dumbprojects.com"
-        },
-        {
-          "text": "GitHub",
-          "url": "https://github.com/jeremehancock/qr",
           "isGitHub": true
         }
       ]
