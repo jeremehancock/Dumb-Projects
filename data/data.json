@@ -65,7 +65,7 @@
       ]
     },
     {
-      "emoji": "🖥️",
+      "emoji": "📄",
       "title": "whoami",
       "description": "An interactive resume that pretends to be a Linux terminal. It boots with an ASCII MOTD, gives you a real prompt, and lets visitors explore with the commands they already know — ls, cd, cat, man, and a cheeky whoami.",
       "tags": ["HTML", "Vanilla JS"],
@@ -112,7 +112,7 @@
       ]
     },
     {
-      "emoji": "💻",
+      "emoji": "🎥",
       "title": "MovieCLI",
       "description": "Browse and stream movies like a hacker in the movies! A sleek command-line interface for viewing, searching, and playing movies from remote servers. Perfect for when you want that authentic terminal aesthetic while managing your media collection.",
       "tags": ["Bash", "SSH", "Remote Media"],
