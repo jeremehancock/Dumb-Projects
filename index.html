@@ -7,7 +7,7 @@
     <title>DumbProjects - AI Web App Portfolio</title>
     <meta name="description"
         content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
-    <meta name="theme-color" content="#fcf4e6">
+    <meta name="theme-color" content="#1c1730">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI2IiBmaWxsPSIjMWUxYjJlIi8+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E4NTVmNztzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjBhNWZhO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHoiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHptMiAzdjEwaDZjMi43NjEgMCA1LTIuMjM5IDUtNXMtMi4yMzktNS01LTVoLTZ6IiBmaWxsPSIjMWUxYjJlIi8+Cjwvc3ZnPgo=">
 
@@ -42,11 +42,16 @@
         }
 
         :root {
-            --ink: #1c1726;
-            --paper: #fcf4e6;
-            --card: #fffdf7;
-            --muted: #4a4356;
+            /* Lines + hard shadows (near-black) */
+            --ink: #08060f;
+            /* Surfaces */
+            --bg: #1c1730;
+            --card: #2a2342;
+            /* Text */
+            --text: #f4ecdf;
+            --muted: #ab9fc0;
 
+            /* Bright accents */
             --purple: #a855f7;
             --blue: #60a5fa;
             --pink: #fb7185;
@@ -71,11 +76,11 @@
 
         body {
             font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--ink);
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
-            background-color: var(--paper);
-            background-image: radial-gradient(rgba(28, 23, 38, 0.08) 1.4px, transparent 1.4px);
+            background-color: var(--bg);
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.4px, transparent 1.4px);
             background-size: 22px 22px;
             -webkit-font-smoothing: antialiased;
         }
@@ -91,8 +96,9 @@
             color: var(--ink);
         }
 
-        /* Highlighter marker */
+        /* Highlighter marker (always dark text on bright marks) */
         .hl {
+            color: var(--ink);
             padding: 0.02em 0.18em;
             border-radius: 6px;
             box-decoration-break: clone;
@@ -108,13 +114,13 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: var(--paper);
+            background: var(--bg);
             border-bottom: var(--bw) solid var(--ink);
             transition: box-shadow 0.2s ease;
         }
 
         .header.scrolled {
-            box-shadow: 0 6px 0 -3px var(--ink), 0 10px 24px -12px rgba(28, 23, 38, 0.5);
+            box-shadow: 0 6px 0 -3px var(--ink), 0 12px 26px -12px rgba(0, 0, 0, 0.7);
         }
 
         .nav {
@@ -132,7 +138,7 @@
             align-items: center;
             gap: 0.6rem;
             text-decoration: none;
-            color: var(--ink);
+            color: var(--text);
         }
 
         .logo-badge {
@@ -163,26 +169,30 @@
         }
 
         .nav-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 600;
             font-size: 0.98rem;
-            color: var(--ink);
+            color: var(--text);
             text-decoration: none;
             padding: 0.5rem 0.85rem;
             border: var(--bw) solid transparent;
             border-radius: 10px;
-            transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, border-color 0.12s ease;
+            transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
         }
 
         .nav-link.active {
             background: var(--yellow);
+            color: var(--ink);
             border-color: var(--ink);
             box-shadow: var(--shadow-sm);
         }
 
         .nav-cta {
             background: var(--ink);
-            color: var(--paper);
+            color: var(--text);
             border: var(--bw) solid var(--ink);
             border-radius: 10px;
             box-shadow: 3px 3px 0 var(--purple);
@@ -191,6 +201,7 @@
         @media (hover: hover) and (pointer: fine) {
             .nav-link:not(.nav-cta):hover {
                 background: var(--yellow);
+                color: var(--ink);
                 border-color: var(--ink);
                 box-shadow: var(--shadow-sm);
                 transform: translate(-1px, -1px);
@@ -217,7 +228,7 @@
             height: 44px;
             font-size: 1.3rem;
             cursor: pointer;
-            color: var(--ink);
+            color: var(--text);
             line-height: 1;
         }
 
@@ -232,15 +243,21 @@
             box-shadow: var(--shadow);
             cursor: pointer;
             text-decoration: none;
-            color: var(--ink);
             display: inline-flex;
             align-items: center;
             gap: 0.55rem;
             transition: transform 0.08s ease, box-shadow 0.08s ease;
         }
 
-        .btn-primary { background: var(--purple); }
-        .btn-secondary { background: var(--card); }
+        .btn-primary {
+            background: var(--purple);
+            color: var(--ink);
+        }
+
+        .btn-secondary {
+            background: var(--card);
+            color: var(--text);
+        }
 
         @media (hover: hover) and (pointer: fine) {
             .btn:hover {
@@ -270,6 +287,7 @@
             font-size: 0.78rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
+            color: var(--ink);
             border: var(--bw) solid var(--ink);
             border-radius: 8px;
             padding: 0.4rem 0.75rem;
@@ -305,6 +323,7 @@
 
         .sticker {
             position: absolute;
+            color: var(--ink);
             border: var(--bw) solid var(--ink);
             border-radius: 12px;
             box-shadow: var(--shadow);
@@ -345,7 +364,7 @@
         /* Ticker */
         .ticker {
             background: var(--ink);
-            color: var(--paper);
+            color: var(--text);
             border-top: var(--bw) solid var(--ink);
             border-bottom: var(--bw) solid var(--ink);
             overflow: hidden;
@@ -438,14 +457,14 @@
             content: '';
             position: absolute;
             inset: 0;
-            background-image: repeating-linear-gradient(45deg, transparent 0 12px, rgba(28, 23, 38, 0.06) 12px 24px);
+            background-image: repeating-linear-gradient(45deg, transparent 0 12px, rgba(8, 6, 15, 0.09) 12px 24px);
             pointer-events: none;
         }
 
         .card-emoji {
             font-size: 3.6rem;
             line-height: 1;
-            filter: drop-shadow(2px 3px 0 rgba(28, 23, 38, 0.22));
+            filter: drop-shadow(2px 3px 0 rgba(8, 6, 15, 0.3));
             transition: transform 0.25s ease;
         }
 
@@ -460,6 +479,7 @@
             top: 10px;
             right: 10px;
             background: var(--green);
+            color: var(--ink);
             border: var(--bw) solid var(--ink);
             border-radius: 8px;
             box-shadow: var(--shadow-sm);
@@ -479,10 +499,10 @@
             right: 0;
             width: 232px;
             background: var(--ink);
-            color: var(--paper);
+            color: var(--text);
             border: var(--bw) solid var(--ink);
             border-radius: 10px;
-            box-shadow: 4px 4px 0 rgba(28, 23, 38, 0.25);
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
             font-family: 'DM Sans', sans-serif;
             font-weight: 500;
             font-size: 0.8rem;
@@ -544,10 +564,11 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.03em;
+            color: var(--text);
             padding: 0.28rem 0.6rem;
             border: 2px solid var(--ink);
             border-radius: 7px;
-            background: var(--paper);
+            background: var(--bg);
         }
 
         .links {
@@ -567,15 +588,16 @@
             padding: 0.5rem 0.8rem;
             border: 2px solid var(--ink);
             border-radius: 9px;
-            background: var(--card);
-            color: var(--ink);
+            background: var(--bg);
+            color: var(--text);
             text-decoration: none;
             box-shadow: var(--shadow-sm);
-            transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease;
+            transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, color 0.12s ease;
         }
 
         .link-btn.primary {
             background: var(--c, var(--purple));
+            color: var(--ink);
         }
 
         .link-btn .arrow {
@@ -585,6 +607,7 @@
         @media (hover: hover) and (pointer: fine) {
             .link-btn:hover {
                 background: var(--c, var(--purple));
+                color: var(--ink);
                 transform: translate(-1px, -1px);
                 box-shadow: 4px 4px 0 var(--ink);
             }
@@ -615,6 +638,7 @@
             top: -22px;
             left: 2rem;
             background: var(--magenta);
+            color: var(--ink);
             border: var(--bw) solid var(--ink);
             border-radius: 9px;
             box-shadow: var(--shadow-sm);
@@ -630,7 +654,7 @@
         .about-panel p {
             font-size: 1.08rem;
             line-height: 1.75;
-            color: #2c2636;
+            color: var(--text);
         }
 
         .about-panel p + p {
@@ -653,7 +677,7 @@
         /* Footer */
         .footer {
             background: var(--ink);
-            color: var(--paper);
+            color: var(--text);
             border-top: var(--bw) solid var(--ink);
             margin-top: 3.5rem;
         }
@@ -684,10 +708,10 @@
             font-weight: 700;
             font-size: 0.92rem;
             color: var(--ink);
-            background: var(--paper);
+            background: var(--text);
             text-decoration: none;
             padding: 0.55rem 0.95rem;
-            border: var(--bw) solid var(--paper);
+            border: var(--bw) solid var(--text);
             border-radius: 10px;
             box-shadow: 3px 3px 0 var(--purple);
             transition: transform 0.08s ease, box-shadow 0.08s ease;
@@ -708,7 +732,7 @@
         .footer-copy {
             font-family: 'Space Mono', monospace;
             font-size: 0.85rem;
-            color: #cfc7dc;
+            color: #c9bfd9;
             line-height: 1.7;
         }
 
@@ -765,11 +789,11 @@
                 right: 0;
                 flex-direction: column;
                 align-items: stretch;
-                gap: 0.5rem;
+                gap: 0.6rem;
                 padding: 1.2rem 1.5rem 1.5rem;
-                background: var(--paper);
+                background: var(--card);
                 border-bottom: var(--bw) solid var(--ink);
-                box-shadow: 0 16px 24px -14px rgba(28, 23, 38, 0.5);
+                box-shadow: 0 18px 26px -14px rgba(0, 0, 0, 0.7);
                 transform: translateY(-130%);
                 opacity: 0;
                 visibility: hidden;
@@ -782,17 +806,22 @@
                 visibility: visible;
             }
 
+            .nav-menu li {
+                width: 100%;
+            }
+
             .nav-link {
-                text-align: center;
-                padding: 0.75rem 1rem;
+                display: flex;
+                width: 100%;
+                padding: 0.8rem 1rem;
                 border-color: var(--ink);
-                background: var(--card);
+                background: var(--bg);
                 box-shadow: var(--shadow-sm);
             }
 
             .nav-cta {
                 background: var(--ink);
-                color: var(--paper);
+                color: var(--text);
             }
 
             .section { padding: 3.5rem 0; }
@@ -822,13 +851,13 @@
 
         /* Scrollbar */
         ::-webkit-scrollbar { width: 12px; }
-        ::-webkit-scrollbar-track { background: var(--paper); }
+        ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb {
             background: var(--purple);
-            border: 3px solid var(--paper);
+            border: 3px solid var(--bg);
             border-radius: 8px;
         }
-        ::-webkit-scrollbar-thumb:hover { background: var(--ink); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--magenta); }
     </style>
 </head>
 
