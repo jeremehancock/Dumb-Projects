@@ -132,7 +132,7 @@
       "emoji": "📌",
       "title": "Stickies",
       "description": "A sleek, single-file sticky-note whiteboard for quickly capturing ideas. No build step, no dependencies — just open index.html in a browser.",
-      "tags": ["HTML", "Vanilla JS"],
+      "tags": ["HTML", "Vanilla JS", "Offline"],
       "links": [
         {
           "text": "Try it Live",
