@@ -24,6 +24,10 @@
       "tags": ["PHP", "Docker", "Plex API"],
       "links": [
         {
+          "text": "Check it out",
+          "url": "https://posteria.apps"
+        },
+        {
           "text": "GitHub",
           "url": "https://github.com/jeremehancock/Posteria",
           "isGitHub": true
