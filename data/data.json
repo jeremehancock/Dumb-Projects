@@ -51,7 +51,7 @@
       "emoji": "🗄️",
       "title": "homelab.md",
       "description": "A single-file, offline-first web app for documenting your homelab infrastructure. Open index.html in any browser — no server, no dependencies, no internet required.",
-      "tags": ["HTML", "Vanilla JS"],
+      "tags": ["HTML", "Vanilla JS", "Offline"],
       "links": [
         {
           "text": "My Homelab",
