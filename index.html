@@ -377,7 +377,6 @@
             display: flex;
             width: max-content;
             will-change: transform;
-            animation: ticker 28s linear infinite;
         }
 
         .ticker-group {
@@ -737,11 +736,6 @@
         }
 
         /* Animations */
-        @keyframes ticker {
-            from { transform: translate3d(0, 0, 0); }
-            to { transform: translate3d(-50%, 0, 0); }
-        }
-
         @keyframes bounce {
             from { transform: translateY(0) rotate(0); }
             to { transform: translateY(-12px) rotate(10deg); }
@@ -816,8 +810,6 @@
                 transition-duration: 0.001ms !important;
                 scroll-behavior: auto !important;
             }
-
-            .ticker-track { animation: none; }
         }
 
         /* Scrollbar */
@@ -937,11 +929,15 @@
             const track = document.getElementById('ticker-track');
             const setHTML = phrases.map(p => `<span>${p}<span class="star"> ★ </span></span>`).join('');
 
+            const SPEED = 60; // px per second — constant, calm pace on every screen
+            let groupWidth = 0;
+            let offset = 0;
+            let lastTime = null;
+
             function build() {
                 // Build one group, repeating the phrase set until it is at least as
-                // wide as the viewport, then clone it. The animation shifts by exactly
-                // one group (-50% of the track), so the full-width second group always
-                // covers the screen at the loop point — no blank gap, no flash.
+                // wide as the viewport, then clone it. Two full-width groups mean the
+                // screen is always covered no matter where the scroll position lands.
                 track.innerHTML = '<div class="ticker-group"></div>';
                 const group = track.firstElementChild;
                 let guard = 0;
@@ -949,11 +945,22 @@
                     group.insertAdjacentHTML('beforeend', setHTML);
                 } while (group.offsetWidth < window.innerWidth && ++guard < 30);
                 track.appendChild(group.cloneNode(true));
+                groupWidth = group.offsetWidth;
+            }
 
-                // Hold a constant scroll speed (~60px/s) regardless of screen width
-                // so the motion feels smooth and identical everywhere. One cycle
-                // shifts the track by exactly one group width.
-                track.style.animationDuration = (group.offsetWidth / 60) + 's';
+            // Drive the scroll with requestAnimationFrame and wrap the position with a
+            // modulo. Unlike a looping CSS animation, there is no iteration to restart,
+            // so the wrap point is mathematically continuous — no stutter when it loops.
+            function tick(now) {
+                if (lastTime === null) lastTime = now;
+                let dt = (now - lastTime) / 1000;
+                lastTime = now;
+                if (dt > 0.05) dt = 0.05; // clamp after the tab has been inactive
+                if (groupWidth > 0) {
+                    offset = (offset + dt * SPEED) % groupWidth;
+                    track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+                }
+                requestAnimationFrame(tick);
             }
 
             build();
@@ -961,12 +968,16 @@
             if (document.fonts && document.fonts.ready) {
                 document.fonts.ready.then(build);
             }
-            // Keep it seamless if the window is resized wider
+            // Keep it covering the screen if the window is resized wider
             let resizeTimer;
             window.addEventListener('resize', () => {
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(build, 200);
             });
+
+            if (!prefersReducedMotion) {
+                requestAnimationFrame(tick);
+            }
         })();
 
         // Create a single project card
