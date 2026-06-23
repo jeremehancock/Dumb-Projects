@@ -436,28 +436,6 @@
             background: var(--border-strong);
         }
 
-        .scroll-cue {
-            position: absolute;
-            bottom: 1.6rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 26px;
-            height: 42px;
-            border: 2px solid var(--border-strong);
-            border-radius: 14px;
-            display: flex;
-            justify-content: center;
-            padding-top: 8px;
-        }
-
-        .scroll-cue span {
-            width: 4px;
-            height: 8px;
-            border-radius: 2px;
-            background: var(--text-soft);
-            animation: scrollDot 1.8s ease-in-out infinite;
-        }
-
         /* Sections */
         .projects {
             padding: 6rem 1.5rem;
@@ -876,23 +854,6 @@
             }
         }
 
-        @keyframes scrollDot {
-            0% {
-                opacity: 0;
-                transform: translateY(-4px);
-            }
-
-            40% {
-                opacity: 1;
-            }
-
-            80%,
-            100% {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-        }
-
         @keyframes float1 {
             0%, 100% {
                 transform: translate(0, 0);
@@ -1146,7 +1107,6 @@
                 </div>
             </div>
         </div>
-        <a href="#projects" class="scroll-cue" aria-label="Scroll to projects"><span></span></a>
     </section>
 
     <!-- Projects Section -->
