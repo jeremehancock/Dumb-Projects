@@ -374,8 +374,14 @@
         }
 
         .ticker-track {
-            display: inline-block;
+            display: flex;
+            width: max-content;
             animation: ticker 28s linear infinite;
+        }
+
+        .ticker-group {
+            display: flex;
+            flex-shrink: 0;
         }
 
         .ticker-track span {
@@ -928,8 +934,33 @@
         (function buildTicker() {
             const phrases = ['Built with AI', 'Too much coffee', 'Delightfully dumb', 'Open source', 'Weird & wonderful', 'Vibe-coded'];
             const track = document.getElementById('ticker-track');
-            const oneSet = phrases.map(p => `<span>${p}<span class="star"> ★ </span></span>`).join('');
-            track.innerHTML = oneSet + oneSet; // duplicate for a seamless loop
+            const setHTML = phrases.map(p => `<span>${p}<span class="star"> ★ </span></span>`).join('');
+
+            function build() {
+                // Build one group, repeating the phrase set until it is at least as
+                // wide as the viewport, then clone it. The animation shifts by exactly
+                // one group (-50% of the track), so the full-width second group always
+                // covers the screen at the loop point — no blank gap, no flash.
+                track.innerHTML = '<div class="ticker-group"></div>';
+                const group = track.firstElementChild;
+                let guard = 0;
+                do {
+                    group.insertAdjacentHTML('beforeend', setHTML);
+                } while (group.offsetWidth < window.innerWidth && ++guard < 30);
+                track.appendChild(group.cloneNode(true));
+            }
+
+            build();
+            // Re-measure once web fonts are ready (glyph widths change the layout)
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(build);
+            }
+            // Keep it seamless if the window is resized wider
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(build, 200);
+            });
         })();
 
         // Create a single project card
