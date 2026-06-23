@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>DumbProjects - AI Web App Portfolio</title>
+    <meta name="description"
+        content="Building weird & wonderful things with AI! Web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
+    <meta name="theme-color" content="#1c1730">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI2IiBmaWxsPSIjMWUxYjJlIi8+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I2E4NTVmNztzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjBhNWZhO3N0b3Atb3BhY2l0eToxIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHoiIGZpbGw9InVybCgjZ3JhZGllbnQpIi8+CiAgPHBhdGggZD0iTTggOGg4YzQuNDE4IDAgOCAzLjU4MiA4IDhzLTMuNTgyIDgtOCA4SDhWOHptMiAzdjEwaDZjMi43NjEgMCA1LTIuMjM5IDUtNXMtMi4yMzktNS01LTVoLTZ6IiBmaWxsPSIjMWUxYjJlIi8+Cjwvc3ZnPgo=">
 
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="DumbProjects - AI Web App Portfolio">
     <meta property="og:description"
-        content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
+        content="Building weird & wonderful things with AI! Web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
     <meta property="og:image" content="https://dumbprojects.com/images/og-image.svg">
-    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:url" content="https://dumbprojects.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DumbProjects">
 
@@ -21,8 +24,15 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DumbProjects - AI Web App Portfolio">
     <meta name="twitter:description"
-        content="Building weird & wonderful things! AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
+        content="Building weird & wonderful things with AI! Web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.">
     <meta name="twitter:image" content="https://dumbprojects.com/images/og-image.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@700&display=swap"
+        rel="stylesheet">
 
     <style>
         * {
@@ -32,896 +42,1088 @@
         }
 
         :root {
-            --primary-bg: #1e1b2e;
-            --secondary-bg: #2a2438;
-            --accent-bg: #3d3556;
-            --primary-text: #ffffff;
-            --secondary-text: #b8b4c8;
-            --accent-color: #e879f9;
-            --accent-purple: #a855f7;
-            --accent-blue: #60a5fa;
-            --accent-yellow: #fbbf24;
-            --accent-green: #4ade80;
-            --gradient: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-            --header-height: 80px;
+            /* Lines + hard shadows (near-black) */
+            --ink: #08060f;
+            /* Surfaces */
+            --bg: #1c1730;
+            --card: #2a2342;
+            /* Text */
+            --text: #f4ecdf;
+            --muted: #ab9fc0;
 
-            /* Dynamic viewport height for mobile */
-            --vh: 1vh;
+            /* Bright accents */
+            --purple: #a855f7;
+            --blue: #60a5fa;
+            --pink: #fb7185;
+            --yellow: #fbbf24;
+            --green: #4ade80;
+            --cyan: #22d3ee;
+            --orange: #fb923c;
+            --magenta: #f472b6;
+
+            --radius: 14px;
+            --bw: 3px;
+            --shadow: 6px 6px 0 var(--ink);
+            --shadow-lg: 9px 9px 0 var(--ink);
+            --shadow-sm: 3px 3px 0 var(--ink);
+            --header-h: 74px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--header-h) + 16px);
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: var(--primary-bg);
-            color: var(--primary-text);
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
+            background-color: var(--bg);
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.4px, transparent 1.4px);
+            background-size: 22px 22px;
+            -webkit-font-smoothing: antialiased;
         }
+
+        h1, h2, h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        ::selection {
+            background: var(--yellow);
+            color: var(--ink);
+        }
+
+        /* Highlighter marker (always dark text on bright marks) */
+        .hl {
+            color: var(--ink);
+            padding: 0.02em 0.18em;
+            border-radius: 6px;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
+        }
+
+        .hl-y { background: var(--yellow); }
+        .hl-c { background: var(--cyan); }
+        .hl-p { background: var(--pink); }
 
         /* Header */
         .header {
-            position: fixed;
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 2rem;
-            transition: all 0.3s ease;
-            height: var(--header-height);
-            display: flex;
-            align-items: center;
+            z-index: 100;
+            background: var(--bg);
+            border-bottom: var(--bw) solid var(--ink);
+            transition: box-shadow 0.2s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: 0 6px 0 -3px var(--ink), 0 12px 26px -12px rgba(0, 0, 0, 0.7);
         }
 
         .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            width: 100%;
+            height: var(--header-h);
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
             text-decoration: none;
+            color: var(--text);
+        }
+
+        .logo-badge {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            background: var(--purple);
+            border: var(--bw) solid var(--ink);
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            font-size: 1.2rem;
+            transform: rotate(-4deg);
+        }
+
+        .logo-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+            letter-spacing: -0.03em;
         }
 
         .nav-menu {
             display: flex;
+            align-items: center;
+            gap: 0.4rem;
             list-style: none;
-            gap: 2rem;
         }
 
         .nav-link {
-            color: var(--secondary-text);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 0.98rem;
+            color: var(--text);
             text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
+            padding: 0.5rem 0.85rem;
+            border: var(--bw) solid transparent;
+            border-radius: 10px;
+            transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
         }
 
-        /* Only apply hover effects on devices with true hover capability */
+        .nav-link.active {
+            background: var(--yellow);
+            color: var(--ink);
+            border-color: var(--ink);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-cta {
+            background: var(--ink);
+            color: var(--text);
+            border: var(--bw) solid var(--ink);
+            border-radius: 10px;
+            box-shadow: 3px 3px 0 var(--purple);
+        }
+
         @media (hover: hover) and (pointer: fine) {
-            .nav-link:hover {
-                color: var(--accent-color);
+            .nav-link:not(.nav-cta):hover {
+                background: var(--yellow);
+                color: var(--ink);
+                border-color: var(--ink);
+                box-shadow: var(--shadow-sm);
+                transform: translate(-1px, -1px);
+            }
+
+            .nav-cta:hover {
+                transform: translate(-2px, -2px);
+                box-shadow: 5px 5px 0 var(--purple);
             }
         }
 
-        .mobile-menu-btn {
+        .nav-cta:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0 0 0 var(--purple);
+        }
+
+        .menu-btn {
             display: none;
-            background: none;
-            border: none;
-            color: var(--primary-text);
-            font-size: 1.5rem;
+            background: var(--card);
+            border: var(--bw) solid var(--ink);
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            width: 44px;
+            height: 44px;
+            font-size: 1.3rem;
             cursor: pointer;
+            color: var(--text);
+            line-height: 1;
         }
 
-        /* Hero Section */
-        .hero {
-            min-height: calc(var(--vh, 1vh) * 100);
-            display: flex;
+        /* Buttons */
+        .btn {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.02rem;
+            padding: 0.9rem 1.6rem;
+            border: var(--bw) solid var(--ink);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            padding-top: var(--header-height);
-            background:
-                radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(96, 165, 250, 0.15) 0%, transparent 50%);
+            gap: 0.55rem;
+            transition: transform 0.08s ease, box-shadow 0.08s ease;
         }
 
-        .hero-content {
-            max-width: 900px;
-            padding: 0 2rem;
-            animation: fadeInUp 1s ease-out;
+        .btn-primary {
+            background: var(--purple);
+            color: var(--ink);
+        }
+
+        .btn-secondary {
+            background: var(--card);
+            color: var(--text);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .btn:hover {
+                transform: translate(-2px, -2px);
+                box-shadow: var(--shadow-lg);
+            }
+        }
+
+        .btn:active {
+            transform: translate(3px, 3px);
+            box-shadow: 0 0 0 var(--ink);
+        }
+
+        /* Layout */
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--ink);
+            border: var(--bw) solid var(--ink);
+            border-radius: 8px;
+            padding: 0.4rem 0.75rem;
+            box-shadow: var(--shadow-sm);
+            background: var(--cyan);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            padding: 4.5rem 0 3.5rem;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
+            font-size: clamp(2.9rem, 8.5vw, 5.6rem);
+            font-weight: 700;
+            margin: 1.5rem 0;
+            max-width: 15ch;
         }
 
         .hero p {
-            font-size: clamp(1.1rem, 3vw, 1.3rem);
-            color: var(--secondary-text);
-            margin-bottom: 2rem;
-            line-height: 1.8;
+            font-size: clamp(1.08rem, 2.5vw, 1.3rem);
+            color: var(--muted);
+            max-width: 44ch;
+            margin-bottom: 2.2rem;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--gradient);
-            color: var(--primary-bg);
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 32px rgba(168, 85, 247, 0.4), 0 4px 16px rgba(96, 165, 250, 0.2);
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        /* Only apply hover effects on devices with true hover capability */
-        @media (hover: hover) and (pointer: fine) {
-            .cta-button:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 12px 48px rgba(168, 85, 247, 0.5), 0 6px 24px rgba(96, 165, 250, 0.3);
-            }
+        .sticker {
+            position: absolute;
+            color: var(--ink);
+            border: var(--bw) solid var(--ink);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            padding: 0.6rem 0.9rem;
+            font-size: 0.85rem;
+            z-index: 1;
         }
 
-        /* Projects Section */
-        .projects {
-            padding: 5rem 2rem;
-            background: var(--secondary-bg);
-            overflow-x: clip;
+        .sticker-1 {
+            top: 3.5rem;
+            right: 2rem;
+            background: var(--pink);
+            transform: rotate(7deg);
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
+        .sticker-2 {
+            top: 13rem;
+            right: 7rem;
+            background: var(--green);
+            transform: rotate(-6deg);
+            font-size: 1.8rem;
+            padding: 0.7rem 0.9rem;
+        }
+
+        .sticker-3 {
+            top: 19rem;
+            right: 1rem;
+            background: var(--yellow);
+            transform: rotate(-3deg);
+        }
+
+        @media (max-width: 980px) {
+            .sticker { display: none; }
+        }
+
+        /* Ticker */
+        .ticker {
+            background: var(--ink);
+            color: var(--text);
+            border-top: var(--bw) solid var(--ink);
+            border-bottom: var(--bw) solid var(--ink);
+            overflow: hidden;
+            padding: 0.8rem 0;
+            margin: 1rem 0 0;
+            white-space: nowrap;
+        }
+
+        .ticker-track {
+            display: flex;
+            width: max-content;
+        }
+
+        .ticker-group {
+            display: flex;
+            flex-shrink: 0;
+            will-change: transform;
+        }
+
+        .ticker-track span {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 1.05rem;
+            padding: 0 1.4rem;
+        }
+
+        .ticker-track .star { color: var(--yellow); }
+
+        /* Sections */
+        .section {
+            padding: 4.5rem 0;
+        }
+
+        .section-head {
+            margin-bottom: 3rem;
+            max-width: 60ch;
         }
 
         .section-title {
-            text-align: center;
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 1rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: clamp(2rem, 5.5vw, 3.4rem);
+            font-weight: 700;
+            margin: 1.1rem 0 0.7rem;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: var(--secondary-text);
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
+        .section-sub {
+            color: var(--muted);
+            font-size: 1.12rem;
         }
 
-        .projects-grid {
+        /* Project grid */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.9rem;
         }
 
-        .project-card {
-            background: var(--accent-bg);
-            border-radius: 20px;
-            overflow: visible;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .card {
             position: relative;
+            background: var(--card);
+            border: var(--bw) solid var(--ink);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            height: 100%;
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), translate 0.12s ease, box-shadow 0.12s ease;
         }
 
-        .project-image {
-            border-radius: 20px 20px 0 0;
-            overflow: hidden;
+        .card.in {
+            opacity: 1;
+            transform: none;
         }
 
-        /* Only apply hover effects on devices with true hover capability */
         @media (hover: hover) and (pointer: fine) {
-            .project-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            .card:hover {
+                translate: -3px -3px;
+                box-shadow: var(--shadow-lg);
             }
         }
 
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background: var(--gradient);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
+        .card-top {
             position: relative;
-            overflow: hidden;
+            z-index: 2;
+            height: 128px;
+            background: var(--c, var(--purple));
+            border-bottom: var(--bw) solid var(--ink);
+            display: grid;
+            place-items: center;
         }
 
-        .project-image::before {
+        .card-top::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            animation: shimmer 3s infinite;
+            inset: 0;
+            background-image: repeating-linear-gradient(45deg, transparent 0 12px, rgba(8, 6, 15, 0.09) 12px 24px);
+            pointer-events: none;
         }
 
-        .project-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            overflow: visible;
+        .card-emoji {
+            font-size: 3.6rem;
+            line-height: 1;
+            filter: drop-shadow(2px 3px 0 rgba(8, 6, 15, 0.3));
+            transition: transform 0.25s ease;
         }
 
-        .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-text);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            position: relative;
+        @media (hover: hover) and (pointer: fine) {
+            .card:hover .card-emoji {
+                transform: rotate(-8deg) scale(1.12);
+            }
         }
 
-        .ai-rewrite-badge {
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid rgba(16, 185, 129, 0.5);
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-            position: relative;
+        .ai-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--green);
+            color: var(--ink);
+            border: var(--bw) solid var(--ink);
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.62rem;
+            letter-spacing: 0.05em;
+            padding: 0.28rem 0.45rem;
+            transform: rotate(5deg);
             cursor: help;
             user-select: none;
-            display: inline-block;
         }
 
-        .ai-rewrite-badge .tooltip {
-            visibility: hidden;
-            opacity: 0;
+        .ai-badge .tip {
             position: absolute;
-            bottom: calc(100% + 8px);
-            left: 50%;
-            transform: translateX(-50%);
-            background: #2d2640;
-            color: var(--primary-text);
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            font-weight: normal;
-            text-transform: none;
+            top: calc(100% + 10px);
+            right: 0;
+            width: 232px;
+            background: var(--ink);
+            color: var(--text);
+            border: var(--bw) solid var(--ink);
+            border-radius: 10px;
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            font-size: 0.8rem;
+            line-height: 1.45;
             letter-spacing: normal;
-            white-space: nowrap;
-            z-index: 1000;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
-            transition: opacity 0.2s ease, visibility 0.2s ease;
+            text-transform: none;
+            padding: 0.7rem 0.8rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: rotate(0);
+            transition: opacity 0.15s ease, visibility 0.15s ease;
             pointer-events: none;
-            line-height: 1.4;
-            width: 300px;
-            text-wrap: auto;
+            z-index: 30;
         }
 
-
-
-        /* Show tooltip on hover for desktop */
         @media (hover: hover) and (pointer: fine) {
-            .ai-rewrite-badge:hover .tooltip {
-                visibility: visible;
+            .ai-badge:hover .tip {
                 opacity: 1;
+                visibility: visible;
             }
         }
 
-        /* Show tooltip when active class is added (for mobile tap) */
-        .ai-rewrite-badge.tooltip-active .tooltip {
-            visibility: visible;
+        .ai-badge.tip-open .tip {
             opacity: 1;
+            visibility: visible;
         }
 
-        /* Make tooltip wrap on smaller screens */
-        @media (max-width: 768px) {
-            .ai-rewrite-badge .tooltip {
-                white-space: normal;
-                max-width: 250px;
-            }
+        .card-body {
+            position: relative;
+            z-index: 1;
+            padding: 1.35rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            flex: 1;
         }
 
-        .project-description {
-            color: var(--secondary-text);
-            margin-bottom: 1rem;
-            line-height: 1.6;
-            flex-grow: 1;
+        .card-title {
+            font-size: 1.32rem;
+            font-weight: 700;
         }
 
-        .project-tags {
+        .card-desc {
+            color: var(--muted);
+            font-size: 0.96rem;
+            line-height: 1.55;
+            flex: 1;
+        }
+
+        .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            margin-top: auto;
+            gap: 0.45rem;
         }
 
         .tag {
-            background: rgba(168, 85, 247, 0.3);
-            color: #ffffff;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid rgba(168, 85, 247, 0.5);
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--text);
+            padding: 0.28rem 0.6rem;
+            border: 2px solid var(--ink);
+            border-radius: 7px;
+            background: var(--bg);
         }
 
-        .project-links {
+        .links {
             display: flex;
-            gap: 1rem;
-            align-self: flex-end;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-top: 0.35rem;
         }
 
-        .project-link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            display: flex;
+        .link-btn {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-flex;
             align-items: center;
-            gap: 4px;
+            gap: 0.4rem;
+            padding: 0.5rem 0.8rem;
+            border: 2px solid var(--ink);
+            border-radius: 9px;
+            background: var(--bg);
+            color: var(--text);
+            text-decoration: none;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease, color 0.12s ease;
         }
 
-        /* Only apply hover effects on devices with true hover capability */
+        .link-btn.primary {
+            background: var(--c, var(--purple));
+            color: var(--ink);
+        }
+
+        .link-btn .arrow {
+            transition: transform 0.2s ease;
+        }
+
         @media (hover: hover) and (pointer: fine) {
-            .project-link:hover {
-                color: var(--primary-text);
+            .link-btn:hover {
+                background: var(--c, var(--purple));
+                color: var(--ink);
+                transform: translate(-1px, -1px);
+                box-shadow: 4px 4px 0 var(--ink);
+            }
+
+            .link-btn:hover .arrow {
+                transform: translate(2px, -2px);
             }
         }
 
-        /* About Section */
-        .about {
-            padding: 5rem 2rem;
-            background: var(--primary-bg);
+        .link-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0 0 0 var(--ink);
         }
 
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
+        /* About */
+        .about-panel {
+            position: relative;
+            max-width: 840px;
+            background: var(--card);
+            border: var(--bw) solid var(--ink);
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            padding: 2.6rem;
         }
 
-        .about p {
-            font-size: 1.1rem;
-            color: var(--secondary-text);
-            margin-bottom: 2rem;
-            line-height: 1.8;
+        .about-tab {
+            position: absolute;
+            top: -22px;
+            left: 2rem;
+            background: var(--magenta);
+            color: var(--ink);
+            border: var(--bw) solid var(--ink);
+            border-radius: 9px;
+            box-shadow: var(--shadow-sm);
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.4rem 0.75rem;
+            transform: rotate(-2deg);
+        }
+
+        .about-panel p {
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: var(--text);
+        }
+
+        .about-panel p + p {
+            margin-top: 1.2rem;
+        }
+
+        .about-emoji {
+            position: absolute;
+            bottom: -26px;
+            right: -16px;
+            font-size: 2.4rem;
+            background: var(--yellow);
+            border: var(--bw) solid var(--ink);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            padding: 0.5rem 0.65rem;
+            transform: rotate(8deg);
         }
 
         /* Footer */
         .footer {
-            padding: 2rem;
-            text-align: center;
-            color: var(--secondary-text);
-            background: var(--primary-bg);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--ink);
+            color: var(--text);
+            border-top: var(--bw) solid var(--ink);
+            margin-top: 3.5rem;
         }
 
-        /* Loading state */
-        .loading {
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.8rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.3rem;
             text-align: center;
-            color: var(--secondary-text);
+        }
+
+        .footer-copy {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            color: #c9bfd9;
+            line-height: 1.7;
+        }
+
+        .footer-copy a {
+            color: var(--yellow);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Loading / error */
+        .loading {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
             padding: 3rem;
-            font-size: 1.1rem;
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            color: var(--muted);
+        }
+
+        .loader {
+            width: 44px;
+            height: 44px;
+            border: var(--bw) solid var(--ink);
+            border-radius: 10px;
+            background: var(--yellow);
+            box-shadow: var(--shadow-sm);
+            animation: bounce 0.7s ease-in-out infinite alternate;
         }
 
         /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes ticker {
+            from { transform: translate3d(0, 0, 0); }
+            to { transform: translate3d(-100%, 0, 0); }
         }
 
-        @keyframes shimmer {
-            0% {
-                transform: translateX(-100%) translateY(-100%) rotate(45deg);
-            }
-
-            100% {
-                transform: translateX(100%) translateY(100%) rotate(45deg);
-            }
+        @keyframes bounce {
+            from { transform: translateY(0) rotate(0); }
+            to { transform: translateY(-12px) rotate(10deg); }
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            :root {
-                --header-height: 70px;
-            }
+        /* Mobile */
+        @media (max-width: 860px) {
+            :root { --header-h: 66px; }
+
+            .menu-btn { display: block; }
 
             .nav-menu {
-                position: fixed;
-                top: var(--header-height);
+                position: absolute;
+                top: var(--header-h);
                 left: 0;
                 right: 0;
-                background: var(--secondary-bg);
                 flex-direction: column;
-                padding: 2rem;
-                transform: translateY(-100%);
+                align-items: stretch;
+                gap: 0.6rem;
+                padding: 1.2rem 1.5rem 1.5rem;
+                background: var(--card);
+                border-bottom: var(--bw) solid var(--ink);
+                box-shadow: 0 18px 26px -14px rgba(0, 0, 0, 0.7);
+                transform: translateY(-130%);
                 opacity: 0;
                 visibility: hidden;
-                transition: all 0.3s ease;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease;
             }
 
-            .nav-menu.active {
+            .nav-menu.open {
                 transform: translateY(0);
                 opacity: 1;
                 visibility: visible;
             }
 
-            .mobile-menu-btn {
-                display: block;
+            .nav-menu li {
+                width: 100%;
             }
 
-            .hero {
-                min-height: calc(var(--vh, 1vh) * 100);
-                padding-top: calc(var(--header-height) + 1rem);
-                padding-bottom: 2rem;
+            .nav-link {
+                display: flex;
+                width: 100%;
+                padding: 0.8rem 1rem;
+                border-color: var(--ink);
+                background: var(--bg);
+                box-shadow: var(--shadow-sm);
             }
 
-            .hero h1 {
-                font-size: clamp(2rem, 10vw, 3rem);
-                line-height: 1.2;
+            .nav-cta {
+                background: var(--ink);
+                color: var(--text);
             }
 
-            .hero p {
-                font-size: 1.1rem;
-                margin-bottom: 1.5rem;
-            }
+            .section { padding: 3.5rem 0; }
 
-            .projects-grid {
+            .grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .header {
-                padding: 1rem;
-                height: var(--header-height);
-            }
-
-            .logo {
-                font-size: 1.3rem;
+                gap: 1.4rem;
             }
         }
 
-        @media (max-width: 480px) {
-            .hero-content {
-                padding: 0 1rem;
-            }
+        @media (max-width: 460px) {
+            .hero-actions { width: 100%; }
+            .btn { flex: 1; justify-content: center; }
+        }
 
-            .projects {
-                padding: 3rem 1rem;
-            }
-
-            .about {
-                padding: 3rem 1rem;
-            }
-
-            .hero {
-                padding-top: calc(var(--header-height) + 0.5rem);
-            }
-
-            .project-card {
-                min-height: auto;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important;
             }
         }
 
-        /* iOS Safari specific fixes */
-        @supports (-webkit-touch-callout: none) {
-            .hero {
-                min-height: -webkit-fill-available;
-            }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--primary-bg);
-        }
-
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb {
-            background: var(--accent-color);
-            border-radius: 4px;
+            background: var(--purple);
+            border: 3px solid var(--bg);
+            border-radius: 8px;
         }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-purple);
-        }
+        ::-webkit-scrollbar-thumb:hover { background: var(--magenta); }
     </style>
 </head>
 
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav">
-            <a href="#" class="logo">DumbProjects</a>
+            <a href="#home" class="logo">
+                <span class="logo-badge" aria-hidden="true">🧪</span>
+                <span class="logo-text">DumbProjects</span>
+            </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="https://github.com/jeremehancock" class="nav-link nav-cta" target="_blank"
+                        rel="noopener noreferrer">GitHub ↗</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <button class="menu-btn" id="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Building Weird & Wonderful Things</h1>
+        <div class="wrap">
+            <span class="kicker">✦ Built With AI</span>
+            <h1>Building <span class="hl hl-y">Weird</span> &amp; <span class="hl hl-c">Wonderful</span> Things</h1>
             <p>Welcome to my digital playground! I'm experimenting with AI to create quirky web apps, silly tools, and
                 delightfully dumb projects that somehow end up being pretty cool.</p>
-            <a href="#projects" class="cta-button">See the Dumb Stuff</a>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">See the Dumb Stuff →</a>
+                <a href="https://github.com/jeremehancock" class="btn btn-secondary" target="_blank"
+                    rel="noopener noreferrer">Browse the Code</a>
+            </div>
+            <span class="sticker sticker-1" aria-hidden="true">★ 100% DUMB</span>
+            <span class="sticker sticker-2" aria-hidden="true">🤖</span>
+            <span class="sticker sticker-3" aria-hidden="true">made w/ ☕</span>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">The Dumb Stuff ✨</h2>
-            <p class="section-subtitle">A collection of AI experiments that somehow work pretty well</p>
+    <!-- Ticker -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track" id="ticker-track"></div>
+    </div>
 
-            <div class="projects-grid" id="projects-grid">
-                <div class="loading">Loading projects...</div>
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="kicker" style="background: var(--orange)">◆ The Collection</span>
+                <h2 class="section-title">The Dumb Stuff <span class="hl hl-p">✨</span></h2>
+                <p class="section-sub">A pile of experiments I built with AI that somehow work pretty well.</p>
+            </div>
+            <div class="grid" id="grid">
+                <div class="loading">
+                    <div class="loader"></div>
+                    <span>Loading the dumb stuff…</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="kicker" style="background: var(--green)">● Behind the Scenes</span>
                 <h2 class="section-title">The Story Behind the Madness</h2>
+            </div>
+            <div class="about-panel">
+                <span class="about-tab">// about.txt</span>
                 <p>Hey there! Welcome to my corner of the internet where "dumb" ideas somehow turn into pretty cool
-                    things. I started this collection because I kept building weird little web apps powered by AI, and
+                    things. I started this collection because I kept building weird little web apps with AI, and
                     my friends kept saying "you should put these somewhere!"</p>
                 <p>So here we are! These projects range from genuinely useful to "why did you make this?" but they're
                     all built with love, curiosity, and probably too much coffee. Each one taught me something new about
                     AI, web development, or just how to have fun while coding.</p>
+                <span class="about-emoji" aria-hidden="true">🚀</span>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p><script>today = new Date(); y0 = today.getFullYear(); document.write('© 2025-' + y0);</script> - DumbProjects. Made with ❤️, ☕, and 🤖 by <a href="https://jeremehancock.com" target="_blank"
-                rel="noopener noreferrer" style="color: var(--accent-purple); text-decoration: none;">Jereme
-                Hancock</a>.</p>
+        <div class="footer-inner">
+            <p class="footer-copy"><script>today = new Date(); y0 = today.getFullYear(); document.write('© 2025-' + y0);</script> — DumbProjects. Made with ❤️, ☕, and 🤖 by <a href="https://jeremehancock.com" target="_blank"
+                    rel="noopener noreferrer">Jereme Hancock</a>.</p>
+        </div>
     </footer>
 
     <script>
-        // GitHub icon SVG
-        const githubIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        // Rotating accent palette for cards
+        const PALETTE = ['#a855f7', '#60a5fa', '#fb7185', '#fbbf24', '#4ade80', '#22d3ee', '#fb923c', '#f472b6'];
+
+        const githubIcon = `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
         </svg>`;
 
-        // Function to create a project card
-        function createProjectCard(project) {
-            const card = document.createElement('div');
-            card.className = 'project-card';
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        const arrowIcon = `<svg class="arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg>`;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Build the marquee ticker
+        (function buildTicker() {
+            const phrases = ['Built with AI', 'Too much coffee', 'Delightfully dumb', 'Open source', 'Weird & wonderful', 'Vibe-coded'];
+            const track = document.getElementById('ticker-track');
+            const setHTML = phrases.map(p => `<span>${p}<span class="star"> ★ </span></span>`).join('');
+
+            const SPEED = 60; // px per second — constant, calm pace on every screen
+
+            function build() {
+                // Build one group, repeating the phrase set until it is at least as
+                // wide as the viewport, then clone it. Both groups run the same CSS
+                // animation (0 -> -100%) on the compositor thread: as one scrolls off
+                // the left, the identical clone is already taking its place, so it
+                // tiles seamlessly. Applying the animation only after both groups are
+                // built starts them in the same frame, keeping them perfectly in phase.
+                track.innerHTML = '<div class="ticker-group"></div>';
+                const first = track.firstElementChild;
+                let guard = 0;
+                do {
+                    first.insertAdjacentHTML('beforeend', setHTML);
+                } while (first.offsetWidth < window.innerWidth && ++guard < 30);
+                track.appendChild(first.cloneNode(true));
+
+                if (prefersReducedMotion) return;
+                // Constant ~60px/s on every screen: one cycle scrolls one group width.
+                const animation = `ticker ${first.offsetWidth / SPEED}s linear infinite`;
+                track.querySelectorAll('.ticker-group').forEach(g => { g.style.animation = animation; });
+            }
+
+            build();
+            // Re-measure once web fonts are ready (glyph widths change the layout)
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(build);
+            }
+            // Keep it covering the screen if the window is resized wider
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(build, 200);
+            });
+        })();
+
+        // Create a single project card
+        function createCard(project, index) {
+            const color = PALETTE[index % PALETTE.length];
+            const card = document.createElement('article');
+            card.className = 'card';
+            card.style.setProperty('--c', color);
+            card.dataset.index = index;
 
             const links = project.links.map(link => {
-                const icon = link.isGitHub ? githubIcon : '';
-                return `
-                    <a href="${link.url}" class="project-link" target="_blank" rel="noopener noreferrer">
-                        ${icon}
-                        ${link.text}
-                    </a>
-                `;
+                if (link.isGitHub) {
+                    return `<a class="link-btn" href="${link.url}" target="_blank" rel="noopener noreferrer">${githubIcon}<span>${link.text}</span></a>`;
+                }
+                return `<a class="link-btn primary" href="${link.url}" target="_blank" rel="noopener noreferrer"><span>${link.text}</span>${arrowIcon}</a>`;
             }).join('');
 
             const tags = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
 
-            const aiRewriteBadge = project.aiRewrite ? `
-                <span class="ai-rewrite-badge" role="button" tabindex="0" aria-label="AI Rewrite information">
-                    AI Rewrite
-                    <span class="tooltip">Not originally built with AI, but has been partially or completely rewritten using AI.</span>
-                </span>
-            ` : '';
+            const aiBadge = project.aiRewrite ? `
+                <span class="ai-badge" role="button" tabindex="0" aria-label="AI Rewrite information">
+                    AI REWRITE
+                    <span class="tip">Not originally built with AI, but has been partially or completely rewritten using AI.</span>
+                </span>` : '';
 
             card.innerHTML = `
-                <div class="project-image">${project.emoji}</div>
-                <div class="project-content">
-                    <h3 class="project-title">
-                        ${project.title}
-                        ${aiRewriteBadge}
-                    </h3>
-                    <p class="project-description">${project.description}</p>
-                    <div class="project-tags">
-                        ${tags}
-                    </div>
-                    <div class="project-links">
-                        ${links}
-                    </div>
+                <div class="card-top">
+                    <span class="card-emoji">${project.emoji}</span>
+                    ${aiBadge}
                 </div>
-            `;
+                <div class="card-body">
+                    <h3 class="card-title">${project.title}</h3>
+                    <p class="card-desc">${project.description}</p>
+                    <div class="tags">${tags}</div>
+                    <div class="links">${links}</div>
+                </div>`;
 
             return card;
         }
 
-        // Function to load and display projects
+        // Load and render projects from the JSON data file
         async function loadProjects() {
-            const projectsGrid = document.getElementById('projects-grid');
+            const grid = document.getElementById('grid');
 
             try {
                 const response = await fetch('data/data.json');
-                if (!response.ok) {
-                    throw new Error('Failed to load projects');
-                }
+                if (!response.ok) throw new Error('Failed to load projects');
 
                 const data = await response.json();
-                projectsGrid.innerHTML = '';
+                grid.innerHTML = '';
 
-                data.projects.forEach(project => {
-                    const card = createProjectCard(project);
-                    projectsGrid.appendChild(card);
+                data.projects.forEach((project, index) => {
+                    grid.appendChild(createCard(project, index));
                 });
 
-                // Animate project cards on scroll
-                const observerOptions = {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -50px 0px'
-                };
-
+                // Reveal cards on scroll with a subtle stagger
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
+                            const i = parseInt(entry.target.dataset.index, 10) || 0;
+                            const delay = prefersReducedMotion ? 0 : Math.min(i, 8) * 60;
+                            setTimeout(() => entry.target.classList.add('in'), delay);
+                            observer.unobserve(entry.target);
                         }
                     });
-                }, observerOptions);
+                }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-                document.querySelectorAll('.project-card').forEach(card => {
-                    observer.observe(card);
-                });
+                document.querySelectorAll('.card').forEach(card => observer.observe(card));
 
-                // Add mobile tap functionality for AI Rewrite badges
-                setTimeout(() => {
-                    const badges = document.querySelectorAll('.ai-rewrite-badge');
-                    console.log('Found badges:', badges.length);
-
-                    // Function to position tooltip to prevent overflow
-                    function positionTooltip(badge) {
-                        const tooltip = badge.querySelector('.tooltip');
-                        if (!tooltip) return;
-
-                        const badgeRect = badge.getBoundingClientRect();
-                        const tooltipRect = tooltip.getBoundingClientRect();
-                        const viewportWidth = window.innerWidth;
-                        const padding = 16; // Padding from screen edge
-
-                        // Reset any previous adjustments
-                        tooltip.style.left = '50%';
-                        tooltip.style.right = 'auto';
-                        tooltip.style.transform = 'translateX(-50%)';
-
-                        // Get the updated position after reset
-                        const updatedRect = tooltip.getBoundingClientRect();
-
-                        // Check if tooltip overflows on the right
-                        if (updatedRect.right > viewportWidth - padding) {
-                            tooltip.style.left = 'auto';
-                            tooltip.style.right = '0';
-                            tooltip.style.transform = 'translateX(0)';
-                        }
-                        // Check if tooltip overflows on the left
-                        else if (updatedRect.left < padding) {
-                            tooltip.style.left = '0';
-                            tooltip.style.right = 'auto';
-                            tooltip.style.transform = 'translateX(0)';
-                        }
-                    }
-
-                    badges.forEach(badge => {
-                        // Position tooltip on hover (for desktop)
-                        badge.addEventListener('mouseenter', () => {
-                            positionTooltip(badge);
-                        });
-
-                        // Handle tap/click for mobile and desktop
-                        badge.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-
-                            // Close any other open tooltips
-                            document.querySelectorAll('.ai-rewrite-badge').forEach(otherBadge => {
-                                if (otherBadge !== badge) {
-                                    otherBadge.classList.remove('tooltip-active');
-                                }
-                            });
-
-                            // Toggle this tooltip
-                            const wasActive = badge.classList.contains('tooltip-active');
-                            badge.classList.toggle('tooltip-active');
-
-                            // Position tooltip after toggle
-                            if (!wasActive) {
-                                setTimeout(() => positionTooltip(badge), 10);
-                            }
-
-                            console.log('Badge clicked, tooltip-active:', badge.classList.contains('tooltip-active'));
-                        });
-
-                        // Handle keyboard accessibility
-                        badge.addEventListener('keydown', (e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                                e.preventDefault();
-                                badge.click();
-                            }
-                        });
-                    });
-
-                    // Close tooltips when clicking outside
-                    document.addEventListener('click', (e) => {
-                        if (!e.target.closest('.ai-rewrite-badge')) {
-                            document.querySelectorAll('.ai-rewrite-badge').forEach(badge => {
-                                badge.classList.remove('tooltip-active');
-                            });
-                        }
-                    });
-
-                    // Reposition tooltips on window resize
-                    window.addEventListener('resize', () => {
-                        document.querySelectorAll('.ai-rewrite-badge.tooltip-active').forEach(badge => {
-                            positionTooltip(badge);
-                        });
-                    });
-                }, 100);
-
+                setupBadges();
             } catch (error) {
                 console.error('Error loading projects:', error);
-                projectsGrid.innerHTML = '<div class="loading">Failed to load projects. Please try again later.</div>';
+                grid.innerHTML = '<div class="loading">Couldn\'t load the dumb stuff. Try again later!</div>';
             }
         }
 
-        // Load projects when the page loads
+        // AI Rewrite badge tap-to-toggle (mobile) + keyboard support
+        function setupBadges() {
+            const badges = document.querySelectorAll('.ai-badge');
+
+            badges.forEach(badge => {
+                badge.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const open = badge.classList.contains('tip-open');
+                    document.querySelectorAll('.ai-badge').forEach(b => b.classList.remove('tip-open'));
+                    if (!open) badge.classList.add('tip-open');
+                });
+
+                badge.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        badge.click();
+                    }
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.ai-badge')) {
+                    document.querySelectorAll('.ai-badge').forEach(b => b.classList.remove('tip-open'));
+                }
+            });
+        }
+
         loadProjects();
 
-        // Fix viewport height for mobile devices
-        function setVH() {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-
-        // Set initial values
-        setVH();
-
-        // Re-calculate on resize and orientation change
-        window.addEventListener('resize', setVH);
-        window.addEventListener('orientationchange', () => {
-            setTimeout(setVH, 100); // Small delay for orientation change
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        // Mobile menu
+        const menuBtn = document.getElementById('menu-btn');
         const navMenu = document.getElementById('nav-menu');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        menuBtn.addEventListener('click', () => {
+            const open = navMenu.classList.toggle('open');
+            menuBtn.textContent = open ? '✕' : '☰';
+            menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
 
-        // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.textContent = '☰';
+                navMenu.classList.remove('open');
+                menuBtn.textContent = '☰';
+                menuBtn.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.nav') && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.textContent = '☰';
+            if (!e.target.closest('.nav') && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                menuBtn.textContent = '☰';
+                menuBtn.setAttribute('aria-expanded', 'false');
             }
         });
 
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 10, 10, 0.98)';
-            } else {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
-            }
-        });
+        // Header shadow + active nav link on scroll
+        const header = document.getElementById('header');
+        const sections = Array.from(document.querySelectorAll('section[id]'));
+        const internalLinks = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight;
+        function onScroll() {
+            const y = window.scrollY;
+            header.classList.toggle('scrolled', y > 10);
 
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+            const pos = y + header.offsetHeight + 60;
+            let current = sections.length ? sections[0].id : '';
+            sections.forEach(s => { if (s.offsetTop <= pos) current = s.id; });
+            internalLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+        }
 
-        // Prevent zoom on iOS when clicking inputs (if any are added later)
-        document.addEventListener('touchstart', function (e) {
-            if (e.touches.length > 1) {
-                e.preventDefault();
-            }
-        });
-
-        // Ensure proper scroll position on page load
-        window.addEventListener('load', () => {
-            if (window.location.hash) {
-                const target = document.querySelector(window.location.hash);
-                if (target) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = target.offsetTop - headerHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
     </script>
 
     <!-- Default Statcounter code for DumbProjects https://dumbprojects.com -->
     <script type="text/javascript">
         var sc_project = 13147109;
         var sc_invisible = 1;
-        var sc_security = "2882673e"; 
+        var sc_security = "2882673e";
     </script>
     <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
     <noscript>
