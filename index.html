@@ -376,6 +376,7 @@
         .ticker-track {
             display: flex;
             width: max-content;
+            will-change: transform;
             animation: ticker 28s linear infinite;
         }
 
@@ -737,8 +738,8 @@
 
         /* Animations */
         @keyframes ticker {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+            from { transform: translate3d(0, 0, 0); }
+            to { transform: translate3d(-50%, 0, 0); }
         }
 
         @keyframes bounce {
@@ -948,6 +949,11 @@
                     group.insertAdjacentHTML('beforeend', setHTML);
                 } while (group.offsetWidth < window.innerWidth && ++guard < 30);
                 track.appendChild(group.cloneNode(true));
+
+                // Hold a constant scroll speed (~60px/s) regardless of screen width
+                // so the motion feels smooth and identical everywhere. One cycle
+                // shifts the track by exactly one group width.
+                track.style.animationDuration = (group.offsetWidth / 60) + 's';
             }
 
             build();
