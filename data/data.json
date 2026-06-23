@@ -31,7 +31,7 @@
       ]
     },
     {
-      "emoji": "📺",
+      "emoji": "🪟",
       "title": "Glimpse",
       "description": "A gorgeous web interface for browsing your Plex, Jellyfin, or Emby media libraries! Features movie trailers, cast info, genre filters, and a \"roll the dice\" random picker. Multi-server support with automatic theming. Your media collection has never looked this good!",
       "tags": ["HTML", "Python", "Docker"],
@@ -207,7 +207,7 @@
       ]
     },
     {
-      "emoji": "🎥",
+      "emoji": "📺",
       "title": "Out of Context TV",
       "description": "Random fullscreen videos with absolutely zero context! A collection of wonderfully weird video clips that will leave you confused, entertained, and asking \"what did I just watch?\" Community-powered through GitHub submissions, because the internet's weirdness is a collaborative effort.",
       "tags": ["HTML", "Vanilla JS", "Community-driven"],
