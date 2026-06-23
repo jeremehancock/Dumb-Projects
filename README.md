@@ -2,7 +2,7 @@
 
 > **Building Weird & Wonderful Things**
 
-Welcome to my digital playground! A collection of AI-powered web apps, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.
+Welcome to my digital playground! A collection of web apps built using AI, quirky tools, and delightfully dumb projects that somehow end up being pretty cool.
 
 ## 🌐 Live Site
 
@@ -37,10 +37,6 @@ Who needs a GUI? A slick command-line Plex media player with fuzzy search and th
 ### 😀 **EmojiFind**
 
 Find any emoji instantly! Lightning-fast search with dark/light themes, one-click copy, and mobile optimization.
-
-### 📱 **QR**
-
-Generate high-quality QR codes instantly and scan them with your phone's camera! Features real-time scanning, smart URL detection, and a sleek terminal-inspired dark theme that works offline.
 
 ## ✨ The Philosophy
 
