@@ -125,14 +125,18 @@
       ]
     },
     {
-      "emoji": "📊",
-      "title": "Libretto",
-      "description": "Your Plex library's personal data export wizard! Transforms your entire media collection into beautiful CSV spreadsheets with cast info, ratings, technical specs, and more. Perfect for data nerds who want to analyze their 47TB of totally legally acquired media!",
-      "tags": ["Python", "CSV Export", "Data Analysis"],
+      "emoji": "📌",
+      "title": "Stickies",
+      "description": "A sleek, single-file sticky-note whiteboard for quickly capturing ideas. No build step, no dependencies — just open index.html in a browser.",
+      "tags": ["HTML", "Vanilla JS", "Offline"],
       "links": [
         {
+          "text": "Try it Live",
+          "url": "https://stickies.dumbprojects.com"
+        },
+        {
           "text": "GitHub",
-          "url": "https://github.com/jeremehancock/Libretto",
+          "url": "https://github.com/jeremehancock/Stickies",
           "isGitHub": true
         }
       ]
