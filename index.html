@@ -394,48 +394,6 @@
             }
         }
 
-        .hero-stats {
-            display: inline-flex;
-            align-items: center;
-            gap: 1.6rem;
-            padding: 1.1rem 1.8rem;
-            border-radius: var(--radius);
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid var(--border);
-            backdrop-filter: blur(8px);
-        }
-
-        .stat {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.2rem;
-        }
-
-        .stat-num {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.9rem;
-            font-weight: 700;
-            line-height: 1;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-label {
-            font-size: 0.72rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--text-dim);
-        }
-
-        .stat-divider {
-            width: 1px;
-            align-self: stretch;
-            background: var(--border-strong);
-        }
-
         /* Sections */
         .projects {
             padding: 6rem 1.5rem;
@@ -952,15 +910,6 @@
                 gap: 1.3rem;
             }
 
-            .hero-stats {
-                gap: 1.1rem;
-                padding: 1rem 1.2rem;
-            }
-
-            .stat-num {
-                font-size: 1.6rem;
-            }
-
             .about-panel {
                 padding: 1.8rem 1.5rem;
             }
@@ -979,12 +928,6 @@
             .btn {
                 justify-content: center;
                 width: 100%;
-            }
-
-            .hero-stats {
-                width: 100%;
-                justify-content: space-between;
-                gap: 0.6rem;
             }
         }
 
@@ -1089,22 +1032,6 @@
                 <a href="#projects" class="btn btn-primary">See the Dumb Stuff</a>
                 <a href="https://github.com/jeremehancock" class="btn btn-ghost" target="_blank"
                     rel="noopener noreferrer">Browse the Code</a>
-            </div>
-            <div class="hero-stats" id="hero-stats">
-                <div class="stat">
-                    <span class="stat-num" id="stat-projects">0</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num" id="stat-oss">0</span>
-                    <span class="stat-label">Open Source</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-num" id="stat-live">0</span>
-                    <span class="stat-label">Live Demos</span>
-                </div>
             </div>
         </div>
     </section>
@@ -1229,35 +1156,6 @@
             return card;
         }
 
-        // Animate a number counting up to its target
-        function animateCount(el, target) {
-            if (!el) return;
-            if (prefersReducedMotion) {
-                el.textContent = target;
-                return;
-            }
-            const duration = 900;
-            const start = performance.now();
-            function tick(now) {
-                const progress = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                el.textContent = Math.round(eased * target);
-                if (progress < 1) requestAnimationFrame(tick);
-            }
-            requestAnimationFrame(tick);
-        }
-
-        // Populate the hero stats from the project data
-        function updateStats(projects) {
-            const total = projects.length;
-            const openSource = projects.filter(p => Array.isArray(p.links) && p.links.some(l => l.isGitHub)).length;
-            const live = projects.filter(p => Array.isArray(p.links) && p.links.some(l => !l.isGitHub)).length;
-
-            animateCount(document.getElementById('stat-projects'), total);
-            animateCount(document.getElementById('stat-oss'), openSource);
-            animateCount(document.getElementById('stat-live'), live);
-        }
-
         // Function to load and display projects
         async function loadProjects() {
             const projectsGrid = document.getElementById('projects-grid');
@@ -1275,8 +1173,6 @@
                     const card = createProjectCard(project, index);
                     projectsGrid.appendChild(card);
                 });
-
-                updateStats(data.projects);
 
                 // Reveal project cards on scroll with a subtle stagger
                 const observerOptions = {
