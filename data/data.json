@@ -65,23 +65,6 @@
       ]
     },
     {
-      "emoji": "📄",
-      "title": "whoami",
-      "description": "An interactive resume that pretends to be a Linux terminal. It boots with an ASCII MOTD, gives you a real prompt, and lets visitors explore with the commands they already know — ls, cd, cat, man, and a cheeky whoami.",
-      "tags": ["HTML", "Vanilla JS"],
-      "links": [
-        {
-          "text": "See it Live",
-          "url": "https://whoami.jereme.dev"
-        },
-        {
-          "text": "GitHub",
-          "url": "https://github.com/jeremehancock/whoami-web",
-          "isGitHub": true
-        }
-      ]
-    },
-    {
       "emoji": "🌐",
       "title": "RetroCities",
       "description": "A retro, GeoCities-style personal portfolio page — neon colors, a scrolling marquee, beveled Windows 95 panels, a starfield background, and 'Best viewed in Netscape' energy — built with plain HTML, CSS, and vanilla JavaScript. No frameworks, no build step.",
@@ -94,6 +77,23 @@
         {
           "text": "GitHub",
           "url": "https://github.com/jeremehancock/retrocities",
+          "isGitHub": true
+        }
+      ]
+    },
+    {
+      "emoji": "📄",
+      "title": "whoami",
+      "description": "An interactive resume that pretends to be a Linux terminal. It boots with an ASCII MOTD, gives you a real prompt, and lets visitors explore with the commands they already know — ls, cd, cat, man, and a cheeky whoami.",
+      "tags": ["HTML", "Vanilla JS"],
+      "links": [
+        {
+          "text": "See it Live",
+          "url": "https://whoami.jereme.dev"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/jeremehancock/whoami-web",
           "isGitHub": true
         }
       ]
