@@ -376,12 +376,12 @@
         .ticker-track {
             display: flex;
             width: max-content;
-            will-change: transform;
         }
 
         .ticker-group {
             display: flex;
             flex-shrink: 0;
+            will-change: transform;
         }
 
         .ticker-track span {
@@ -736,6 +736,11 @@
         }
 
         /* Animations */
+        @keyframes ticker {
+            from { transform: translate3d(0, 0, 0); }
+            to { transform: translate3d(-100%, 0, 0); }
+        }
+
         @keyframes bounce {
             from { transform: translateY(0) rotate(0); }
             to { transform: translateY(-12px) rotate(10deg); }
@@ -930,37 +935,26 @@
             const setHTML = phrases.map(p => `<span>${p}<span class="star"> ★ </span></span>`).join('');
 
             const SPEED = 60; // px per second — constant, calm pace on every screen
-            let groupWidth = 0;
-            let offset = 0;
-            let lastTime = null;
 
             function build() {
                 // Build one group, repeating the phrase set until it is at least as
-                // wide as the viewport, then clone it. Two full-width groups mean the
-                // screen is always covered no matter where the scroll position lands.
+                // wide as the viewport, then clone it. Both groups run the same CSS
+                // animation (0 -> -100%) on the compositor thread: as one scrolls off
+                // the left, the identical clone is already taking its place, so it
+                // tiles seamlessly. Applying the animation only after both groups are
+                // built starts them in the same frame, keeping them perfectly in phase.
                 track.innerHTML = '<div class="ticker-group"></div>';
-                const group = track.firstElementChild;
+                const first = track.firstElementChild;
                 let guard = 0;
                 do {
-                    group.insertAdjacentHTML('beforeend', setHTML);
-                } while (group.offsetWidth < window.innerWidth && ++guard < 30);
-                track.appendChild(group.cloneNode(true));
-                groupWidth = group.offsetWidth;
-            }
+                    first.insertAdjacentHTML('beforeend', setHTML);
+                } while (first.offsetWidth < window.innerWidth && ++guard < 30);
+                track.appendChild(first.cloneNode(true));
 
-            // Drive the scroll with requestAnimationFrame and wrap the position with a
-            // modulo. Unlike a looping CSS animation, there is no iteration to restart,
-            // so the wrap point is mathematically continuous — no stutter when it loops.
-            function tick(now) {
-                if (lastTime === null) lastTime = now;
-                let dt = (now - lastTime) / 1000;
-                lastTime = now;
-                if (dt > 0.05) dt = 0.05; // clamp after the tab has been inactive
-                if (groupWidth > 0) {
-                    offset = (offset + dt * SPEED) % groupWidth;
-                    track.style.transform = `translate3d(${-offset}px, 0, 0)`;
-                }
-                requestAnimationFrame(tick);
+                if (prefersReducedMotion) return;
+                // Constant ~60px/s on every screen: one cycle scrolls one group width.
+                const animation = `ticker ${first.offsetWidth / SPEED}s linear infinite`;
+                track.querySelectorAll('.ticker-group').forEach(g => { g.style.animation = animation; });
             }
 
             build();
@@ -974,10 +968,6 @@
                 clearTimeout(resizeTimer);
                 resizeTimer = setTimeout(build, 200);
             });
-
-            if (!prefersReducedMotion) {
-                requestAnimationFrame(tick);
-            }
         })();
 
         // Create a single project card
