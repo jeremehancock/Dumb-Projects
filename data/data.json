@@ -19,17 +19,17 @@
     },
     {
       "emoji": "🎬",
-      "title": "Posteria",
+      "title": "Marquee",
       "description": "Your Plex library's poster collection deserves better! A slick web app that lets you organize, upload, and manage custom movie and TV show posters. It even grabs artwork from TMDB and Fanart.tv automatically. Plex poster chaos, solved!",
       "tags": ["PHP", "Docker", "Plex API"],
       "links": [
         {
           "text": "Check it Out",
-          "url": "https://posteria.app"
+          "url": "https://marquee.dumbprojects.com"
         },
         {
           "text": "GitHub",
-          "url": "https://github.com/jeremehancock/Posteria",
+          "url": "https://github.com/jeremehancock/Marquee",
           "isGitHub": true
         }
       ]
